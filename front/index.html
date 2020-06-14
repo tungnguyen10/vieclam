@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <meta name="description" content="DESCRIPTION">
+    <meta name="keywords" content="KEYWORDS">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="./templates/css/bootstrap-grid.css" rel="stylesheet">
+    <link href="./templates/css/slick.css" rel="stylesheet">
+    <link href="./templates/css/slick-theme.css" rel="stylesheet">
+    <link href="./templates/css/style.css" rel="stylesheet">
+  </head>
+</html>
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <dl class="login">
+            <dt><i class="fas fa-user"></i></dt>
+            <dd class="login-info">Tài khoản<span>Đăng ký / Đăng nhập</span></dd>
+            <dd class="login-register">
+              <ul>
+                <li><a href="/account/login" title="Đăng nhập">Đăng nhập</a></li>
+                <li><a href="/account/register" title="Đăng ký">Đăng ký</a></li>
+              </ul>
+            </dd>
+          </dl>
+        </div>
+        <div class="col-md-6">
+          <h1><a href="#"><img src="./templates/img/logo.png" alt="nthc"></a></h1>
+        </div>
+        <div class="col-md-3">
+          <div class="contact">
+            <dl class="hotline">
+              <dt><i class="fas fa-mobile-alt"></i></dt>
+              <dd>Hotline<span>(028)389 44 109</span></dd>
+            </dl>
+            <select id="language" name="language">
+              <option value="Vietnam">Vietnam</option>
+              <option value="English">English</option>
+              <option value="China">China</option>
+              <option value="Japan">Japan</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <nav>
+    <div class="container">
+      <ul>
+        <li class="active"><a href="#">Trang Chủ</a></li>
+        <li><a href="#">Người Tìm Việc</a></li>
+        <li><a href="#">Nhà Tuyển Dụng</a></li>
+        <li><a href="#">Chính Sách</a></li>
+        <li><a href="#">Tin Tức - Sự Kiện</a></li>
+        <li><a href="#">Liên Hệ</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section class="slider">
+    <ul class="slider-banner">
+      <li><img src="./templates/img/slider.jpg" alt=""></li>
+      <li><img src="./templates/img/slider.jpg" alt=""></li>
+    </ul>
+    <div class="container">
+      <div class="row">
+        <div class="search">
+          <form id="search">
+            <div class="form-group fas fa-search">
+              <input class="form-control" type="email" placeholder="Chức danh, kỹ năng, tên công ty">
+            </div>
+            <div class="form-group far fa-list-alt">
+              <select class="form-control" id="allwork">
+                <option value="">Tất cả ngành nghề</option>
+                <option value="volvo">2</option>
+                <option value="volvo">3</option>
+                <option value="volvo">4</option>
+                <option value="volvo">5</option>
+              </select>
+            </div>
+            <div class="form-group fas fa-map-marker-alt">
+              <select class="form-control" id="allcity">
+                <option value="" selected="selected">Tất cả địa điểm</option>
+                <option value="An Giang">An Giang</option>
+                <option value="Vũng Tàu">Vũng Tàu</option>
+                <option value="Bắc Giang">Bắc Giang</option>
+                <option value="Bắc Kạn">Bắc Kạn</option>
+                <option value="Bạc Liêu">Bạc Liêu</option>
+                <option value="Bắc Ninh">Bắc Ninh</option>
+                <option value="Bến Tre">Bến Tre</option>
+                <option value="Bình Định">Bình Định</option>
+                <option value="Bình Dương">Bình Dương</option>
+                <option value="Bình Phước">Bình Phước</option>
+                <option value="Bình Thuận">Bình Thuận</option>
+                <option value="Cà Mau">Cà Mau</option>
+                <option value="Cần Thơ">Cần Thơ</option>
+                <option value="Cao Bằng">Cao Bằng</option>
+                <option value="Đà Nẵng">Đà Nẵng</option>
+                <option value="Đắk Lắk">Đắk Lắk</option>
+                <option value="Đắk Nông">Đắk Nông</option>
+                <option value="Điện Biên">Điện Biên</option>
+                <option value="Đồng Nai">Đồng Nai</option>
+                <option value="Đồng Tháp">Đồng Tháp</option>
+                <option value="Gia Lai">Gia Lai</option>
+                <option value="Hà Giang">Hà Giang</option>
+                <option value="Hà Nam">Hà Nam</option>
+                <option value="Hà Nội">Hà Nội</option>
+                <option value="Hà Tĩnh">Hà Tĩnh</option>
+                <option value="Hải Dương">Hải Dương</option>
+                <option value="Hải Phòng">Hải Phòng</option>
+                <option value="Hậu Giang">Hậu Giang</option>
+                <option value="Hòa Bình">Hòa Bình</option>
+                <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+                <option value="Hưng Yên">Hưng Yên</option>
+                <option value="Khánh Hòa">Khánh Hòa</option>
+                <option value="Kiên Giang">Kiên Giang</option>
+                <option value="Kon Tum">Kon Tum</option>
+                <option value="Lai Châu">Lai Châu</option>
+                <option value="Lâm Đồng">Lâm Đồng</option>
+                <option value="Lạng Sơn">Lạng Sơn</option>
+                <option value="Lào Cai">Lào Cai</option>
+                <option value="Long An">Long An</option>
+                <option value="Nam Định">	Nam Định</option>
+                <option value="Nghệ An">Nghệ An</option>
+                <option value="Ninh Bình">Ninh Bình</option>
+                <option value="Ninh Thuận">Ninh Thuận</option>
+                <option value="Phú Thọ">Phú Thọ</option>
+                <option value="Phú Yên">Phú Yên</option>
+                <option value="Quảng Bình">Quảng Bình</option>
+                <option value="Quảng Nam">Quảng Nam</option>
+                <option value="Quảng Ngãi">Quảng Ngãi</option>
+                <option value="Quảng Ninh">Quảng Ninh</option>
+                <option value="Quảng Trị">Quảng Trị</option>
+                <option value="Sóc Trăng">Sóc Trăng</option>
+                <option value="Sơn La">Sơn La</option>
+                <option value="Tây Ninh">Tây Ninh</option>
+                <option value="Thái Bình">Thái Bình</option>
+                <option value="Thái Nguyên">Thái Nguyên</option>
+                <option value="Thanh Hóa">Thanh Hóa</option>
+                <option value="Thừa Thiên Huế">Thừa Thiên Huế</option>
+                <option value="Tiền Giang">Tiền Giang</option>
+                <option value="Trà Vinh">Trà Vinh</option>
+                <option value="Tuyên Quang">Tuyên Quang</option>
+                <option value="Vĩnh Long">Vĩnh Long</option>
+                <option value="Vĩnh Phúc">Vĩnh Phúc</option>
+                <option value="Yên Bái">Yên Bái</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <button type="submit" form="search" value="Submit">Tìm việc</button>
+              <p class="search-plus"><a href="#"><i class="fas fa-search-plus"> </i>Tìm Kiếm Nâng Cao</a></p>
+            </div>
+          </form>
+        </div>
+        <ul class="bottom-work">
+          <li><a href="#"><span></span>Dịch vụ tuyển dụng</a></li>
+          <li><a href="#"><span></span>Dịch vụ việc làm</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="advanced-work">
+    <div class="container"> 
+      <div class="row">
+        <div class="advanced">
+          <h2 class="title-work">Thông Tin Tuyển Dụng Mới Nhất</h2>
+          <div class="advanced-work-group slider-work">
+            <div class="advanced-group">
+              <div class="advanced-job">
+                <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a>
+                  <div class="job-hot">NEW</div>
+                </div>
+                <div class="job-content">
+                  <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                  <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                  <ul class="job-salary">
+                    <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                    <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                    <li><i class="far fa-clock"></i>02-03-2020</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="advanced-job">
+                <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                <div class="job-content">
+                  <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                  <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                  <ul class="job-salary">
+                    <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                    <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                    <li><i class="far fa-clock"></i>02-03-2020</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="advanced-job">
+                <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a>
+                  <div class="job-hot">NEW</div>
+                </div>
+                <div class="job-content">
+                  <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                  <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                  <ul class="job-salary">
+                    <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                    <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                    <li><i class="far fa-clock"></i>02-03-2020</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="advanced-group">
+              <div class="advanced-job">
+                <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                <div class="job-content">
+                  <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                  <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                  <ul class="job-salary">
+                    <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                    <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                    <li><i class="far fa-clock"></i>02-03-2020</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="advanced-job">
+                <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                <div class="job-content">
+                  <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                  <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                  <ul class="job-salary">
+                    <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                    <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                    <li><i class="far fa-clock"></i>02-03-2020</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="advanced-job">
+                <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                <div class="job-content">
+                  <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                  <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                  <ul class="job-salary">
+                    <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                    <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                    <li><i class="far fa-clock"></i>02-03-2020</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="advanced-group">
+              <div class="advanced-job">
+                <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a>
+                  <div class="job-hot">NEW</div>
+                </div>
+                <div class="job-content">
+                  <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                  <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                  <ul class="job-salary">
+                    <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                    <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                    <li><i class="far fa-clock"></i>02-03-2020</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="advanced-job">
+                <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                <div class="job-content">
+                  <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                  <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                  <ul class="job-salary">
+                    <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                    <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                    <li><i class="far fa-clock"></i>02-03-2020</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="advanced-job">
+                <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                <div class="job-content">
+                  <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                  <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                  <ul class="job-salary">
+                    <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                    <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                    <li><i class="far fa-clock"></i>02-03-2020</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="advanced-group">
+              <div class="advanced-job">
+                <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                <div class="job-content">
+                  <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                  <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                  <ul class="job-salary">
+                    <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                    <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                    <li><i class="far fa-clock"></i>02-03-2020</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="advanced-job">
+                <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                <div class="job-content">
+                  <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                  <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                  <ul class="job-salary">
+                    <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                    <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                    <li><i class="far fa-clock"></i>02-03-2020</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="advanced-job">
+                <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                <div class="job-content">
+                  <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                  <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                  <ul class="job-salary">
+                    <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                    <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                    <li><i class="far fa-clock"></i>02-03-2020</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="advanced-group">
+              <div class="advanced-job">
+                <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                <div class="job-content">
+                  <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                  <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                  <ul class="job-salary">
+                    <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                    <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                    <li><i class="far fa-clock"></i>02-03-2020</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="advanced-job">
+                <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                <div class="job-content">
+                  <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                  <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                  <ul class="job-salary">
+                    <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                    <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                    <li><i class="far fa-clock"></i>02-03-2020</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="advanced-job">
+                <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                <div class="job-content">
+                  <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                  <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                  <ul class="job-salary">
+                    <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                    <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                    <li><i class="far fa-clock"></i>02-03-2020</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="advanced-group">
+              <div class="advanced-job">
+                <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                <div class="job-content">
+                  <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                  <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                  <ul class="job-salary">
+                    <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                    <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                    <li><i class="far fa-clock"></i>02-03-2020</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="advanced-job">
+                <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                <div class="job-content">
+                  <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                  <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                  <ul class="job-salary">
+                    <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                    <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                    <li><i class="far fa-clock"></i>02-03-2020</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="advanced-job">
+                <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                <div class="job-content">
+                  <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                  <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                  <ul class="job-salary">
+                    <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                    <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                    <li><i class="far fa-clock"></i>02-03-2020</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="good-work">
+    <div class="container"> 
+      <div class="row">
+        <div class="col-md-8">
+          <div class="advanced job-goods">
+            <h2 class="title-work">Việc Làm Tốt Nhất</h2>
+            <div class="advanced-work-group slider-good-work">
+              <div class="advanced-group">
+                <div class="advanced-job">
+                  <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a>
+                    <div class="job-hot">NEW</div>
+                  </div>
+                  <div class="job-content">
+                    <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                    <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                    <ul class="job-salary">
+                      <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                      <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                      <li><i class="far fa-clock"></i>02-03-2020</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="advanced-job">
+                  <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                  <div class="job-content">
+                    <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                    <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                    <ul class="job-salary">
+                      <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                      <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                      <li><i class="far fa-clock"></i>02-03-2020</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="advanced-job">
+                  <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a>
+                    <div class="job-hot">NEW</div>
+                  </div>
+                  <div class="job-content">
+                    <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                    <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                    <ul class="job-salary">
+                      <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                      <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                      <li><i class="far fa-clock"></i>02-03-2020</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="advanced-group">
+                <div class="advanced-job">
+                  <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                  <div class="job-content">
+                    <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                    <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                    <ul class="job-salary">
+                      <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                      <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                      <li><i class="far fa-clock"></i>02-03-2020</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="advanced-job">
+                  <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                  <div class="job-content">
+                    <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                    <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                    <ul class="job-salary">
+                      <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                      <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                      <li><i class="far fa-clock"></i>02-03-2020</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="advanced-job">
+                  <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                  <div class="job-content">
+                    <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                    <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                    <ul class="job-salary">
+                      <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                      <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                      <li><i class="far fa-clock"></i>02-03-2020</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="advanced-group">
+                <div class="advanced-job">
+                  <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a>
+                    <div class="job-hot">NEW</div>
+                  </div>
+                  <div class="job-content">
+                    <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                    <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                    <ul class="job-salary">
+                      <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                      <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                      <li><i class="far fa-clock"></i>02-03-2020</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="advanced-job">
+                  <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                  <div class="job-content">
+                    <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                    <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                    <ul class="job-salary">
+                      <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                      <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                      <li><i class="far fa-clock"></i>02-03-2020</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="advanced-job">
+                  <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                  <div class="job-content">
+                    <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                    <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                    <ul class="job-salary">
+                      <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                      <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                      <li><i class="far fa-clock"></i>02-03-2020</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="advanced-group">
+                <div class="advanced-job">
+                  <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                  <div class="job-content">
+                    <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                    <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                    <ul class="job-salary">
+                      <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                      <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                      <li><i class="far fa-clock"></i>02-03-2020</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="advanced-job">
+                  <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                  <div class="job-content">
+                    <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                    <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                    <ul class="job-salary">
+                      <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                      <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                      <li><i class="far fa-clock"></i>02-03-2020</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="advanced-job">
+                  <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                  <div class="job-content">
+                    <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                    <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                    <ul class="job-salary">
+                      <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                      <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                      <li><i class="far fa-clock"></i>02-03-2020</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="advanced job-salary">
+            <h2 class="title-work">Việc Làm Thu Nhập Cao    </h2>
+            <div class="advanced-work-group slider-good-work">
+              <div class="advanced-group">
+                <div class="advanced-job">
+                  <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a>
+                    <div class="job-hot">NEW</div>
+                  </div>
+                  <div class="job-content">
+                    <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                    <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                    <ul class="job-salary">
+                      <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                      <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                      <li><i class="far fa-clock"></i>02-03-2020</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="advanced-job">
+                  <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                  <div class="job-content">
+                    <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                    <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                    <ul class="job-salary">
+                      <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                      <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                      <li><i class="far fa-clock"></i>02-03-2020</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="advanced-job">
+                  <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a>
+                    <div class="job-hot">NEW</div>
+                  </div>
+                  <div class="job-content">
+                    <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                    <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                    <ul class="job-salary">
+                      <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                      <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                      <li><i class="far fa-clock"></i>02-03-2020</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="advanced-group">
+                <div class="advanced-job">
+                  <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                  <div class="job-content">
+                    <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                    <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                    <ul class="job-salary">
+                      <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                      <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                      <li><i class="far fa-clock"></i>02-03-2020</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="advanced-job">
+                  <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                  <div class="job-content">
+                    <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                    <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                    <ul class="job-salary">
+                      <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                      <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                      <li><i class="far fa-clock"></i>02-03-2020</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="advanced-job">
+                  <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                  <div class="job-content">
+                    <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                    <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                    <ul class="job-salary">
+                      <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                      <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                      <li><i class="far fa-clock"></i>02-03-2020</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="advanced-group">
+                <div class="advanced-job">
+                  <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a>
+                    <div class="job-hot">NEW</div>
+                  </div>
+                  <div class="job-content">
+                    <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                    <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                    <ul class="job-salary">
+                      <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                      <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                      <li><i class="far fa-clock"></i>02-03-2020</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="advanced-job">
+                  <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                  <div class="job-content">
+                    <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                    <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                    <ul class="job-salary">
+                      <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                      <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                      <li><i class="far fa-clock"></i>02-03-2020</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="advanced-job">
+                  <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                  <div class="job-content">
+                    <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                    <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                    <ul class="job-salary">
+                      <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                      <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                      <li><i class="far fa-clock"></i>02-03-2020</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="advanced-group">
+                <div class="advanced-job">
+                  <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                  <div class="job-content">
+                    <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                    <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                    <ul class="job-salary">
+                      <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                      <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                      <li><i class="far fa-clock"></i>02-03-2020</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="advanced-job">
+                  <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                  <div class="job-content">
+                    <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                    <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                    <ul class="job-salary">
+                      <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                      <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                      <li><i class="far fa-clock"></i>02-03-2020</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="advanced-job">
+                  <div class="job-image"><a href="#"><img src="./templates/img/job_logo.png" alt="logo job"></a></div>
+                  <div class="job-content">
+                    <h3><a href="#">Nhân Viên Thu Mua - Đi Làm Ngay</a></h3>
+                    <div class="name-company">CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</div>
+                    <ul class="job-salary">
+                      <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                      <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                      <li><i class="far fa-clock"></i>02-03-2020</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="typical-staff">
+            <h2 class="title">ứng viên tiêu biểu</h2>
+            <div class="sub-title">Ứng viên có nhiều kinh nghiệm trong lĩnh vực kế toán</div>
+            <div class="staff-group">
+              <div class="staff">
+                <div class="staff-photo"><a href="#"><img src="./templates/img/staff.png" alt="staff"></a></div>
+                <div class="staff-content">
+                  <h3>Nguyễn Thanh Tùng</h3>
+                  <dl>
+                    <dt class="staff-major">Kế toán - Kiểm toán</dt>
+                    <dd class="staff-salary">Lương: 13.500.000 đ  - TP.HCM</dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="staff">
+                <div class="staff-photo"><a href="#"><img src="./templates/img/staff.png" alt="staff"></a></div>
+                <div class="staff-content">
+                  <h3>Nguyễn Thanh Tùng</h3>
+                  <dl>
+                    <dt class="staff-major">Kế toán - Kiểm toán</dt>
+                    <dd class="staff-salary">Lương: 13.500.000 đ  - TP.HCM</dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="staff">
+                <div class="staff-photo"><a href="#"><img src="./templates/img/staff.png" alt="staff"></a></div>
+                <div class="staff-content">
+                  <h3>Nguyễn Thanh Tùng</h3>
+                  <dl>
+                    <dt class="staff-major">Kế toán - Kiểm toán</dt>
+                    <dd class="staff-salary">Lương: 13.500.000 đ  - TP.HCM</dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="staff">
+                <div class="staff-photo"><a href="#"><img src="./templates/img/staff.png" alt="staff"></a></div>
+                <div class="staff-content">
+                  <h3>Nguyễn Thanh Tùng</h3>
+                  <dl>
+                    <dt class="staff-major">Kế toán - Kiểm toán</dt>
+                    <dd class="staff-salary">Lương: 13.500.000 đ  - TP.HCM</dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="staff">
+                <div class="staff-photo"><a href="#"><img src="./templates/img/staff.png" alt="staff"></a></div>
+                <div class="staff-content">
+                  <h3>Nguyễn Thanh Tùng</h3>
+                  <dl>
+                    <dt class="staff-major">Kế toán - Kiểm toán</dt>
+                    <dd class="staff-salary">Lương: 13.500.000 đ  - TP.HCM</dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="staff">
+                <div class="staff-photo"><a href="#"><img src="./templates/img/staff.png" alt="staff"></a></div>
+                <div class="staff-content">
+                  <h3>Nguyễn Thanh Tùng</h3>
+                  <dl>
+                    <dt class="staff-major">Kế toán - Kiểm toán</dt>
+                    <dd class="staff-salary">Lương: 13.500.000 đ  - TP.HCM</dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="staff">
+                <div class="staff-photo"><a href="#"><img src="./templates/img/staff.png" alt="staff"></a></div>
+                <div class="staff-content">
+                  <h3>Nguyễn Thanh Tùng</h3>
+                  <dl>
+                    <dt class="staff-major">Kế toán - Kiểm toán</dt>
+                    <dd class="staff-salary">Lương: 13.500.000 đ  - TP.HCM</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>footer</footer>
+  <script src="./templates/js/jquery.js"></script>
+  <script src="./templates/js/slick.min.js"></script>
+  <script src="./templates/js/default.js"></script>
+</body>

@@ -1,0 +1,159 @@
+/* Scss common */
+@charset "UTF-8";
+/*=============================================
+ * font
+ *=============================================*/
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,900;1,400;1,500;1,900&display=swap');
+
+
+.fnt-bevietnam {
+    font-family: 'Be Vietnam', sans-serif;
+}
+.fnt-roboto{
+    font-family: 'Roboto', sans-serif;
+}
+.fnt-oswal {
+    font-family: 'Oswald', sans-serif;
+}
+
+/*=============================================
+ * insert section
+ *=============================================*/
+@for $il from 1 through 10 {
+    #sec#{$il} {
+        position: relative;
+    }
+}
+
+
+
+/*=============================================
+ * body
+ *=============================================*/
+
+body {
+    color: #111;
+    font-family: 'Be Vietnam', sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0;
+    background: #FFF;
+    min-width: inherit;
+    min-height: inherit;
+    max-height: 100%;
+}
+
+/*=============================================
+ * .bg-parallax
+ *=============================================*/
+
+.bg-parallax {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 600px;
+}
+
+
+/*=============================================
+ * customs common - Tung
+ *=============================================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+a {
+    color: inherit;
+    cursor: pointer;
+    outline: none !important;
+    text-decoration: none !important;
+    display: block;
+    -webkit-transition: all .3s ease 0s;
+    -moz-transition: all .3s ease 0s;
+    -ms-transition: all .3s ease 0s;
+    -o-transition: all .3s ease 0s;
+    transition: all .3s ease 0s;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.fn {
+    float: none;
+}
+
+
+/*=============================================
+ * nav - float/inline
+ *=============================================*/
+
+.nav-fl>* {
+    float: left;
+}
+
+.nav-fr>* {
+    float: right;
+}
+
+.nav-inline>* {
+    display: inline-block;
+}
+
+@media only screen and (max-width:767px) {
+    .nav-fl>* {
+        float: none;
+    }
+}
+
+/*=============================================
+ * bread-crumb
+ *=============================================*/
+
+.bread-crumb {
+    position: relative;
+    z-index: 1;
+    background: #f2f2f2;
+    -webkit-box-shadow: 0px 7px 10px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 7px 10px -4px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 7px 10px -4px rgba(0, 0, 0, 0.75);
+
+    .breadcrumb {
+        overflow: hidden;
+
+        >* {
+            float: left;
+            padding: 8px 0;
+        }
+
+        i {
+            padding: 0 5px;
+            font-size: 11px;
+        }
+    }
+}
+
+
