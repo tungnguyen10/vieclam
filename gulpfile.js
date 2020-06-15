@@ -2,7 +2,7 @@ var gulp = require("gulp");
 var sass = require("gulp-sass");
 var minify = require('gulp-minify');
 var pug = require('gulp-pug');
-var image = require('gulp-image');
+// var image = require('gulp-image');
 var browserSync = require('browser-sync').create();
 
 // listen events
@@ -43,9 +43,9 @@ gulp.task("sass", function() {
     .pipe(browserSync.stream());
 
     // optimizer image
-    gulp.src('./src/templates/img/*')
-    .pipe(image())
-    .pipe(gulp.dest('./front/templates/img'));
+    // gulp.src('./src/templates/img/*')
+    // .pipe(image());
+    // .pipe(gulp.dest('./front/templates/img'));
 
 
 });

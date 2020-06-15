@@ -1,26 +1,32 @@
 /* Scss style */
 @charset "UTF-8";
-@import "common.scss"; /* Using a string */
+@import "common.scss";
+/* Using a string */
 $color_title: #c02739;
 $color: #f2b400;
 $bg_title: #ff9234;
 $bgborder: #f2f2f2;
 $color_txt: #333;
+$color666: #666;
 $box-shadow: 0px 0px 8px 1px #cecece;
+
 .flex {
   display: flex;
 }
+
 .flex-between {
   display: flex;
   justify-content: space-between;
   /*Căn giữa trên dưới*/
 }
+
 .title {
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
 }
+
 .title-work {
   font-size: 16px;
   text-align: center;
@@ -29,12 +35,15 @@ $box-shadow: 0px 0px 8px 1px #cecece;
   font-weight: 500;
   color: #ffffff;
 }
+
 header {
   position: relative;
   padding: 5px 0;
+
   h1 {
     text-align: center;
   }
+
   i {
     width: 30px;
     height: 30px;
@@ -44,15 +53,18 @@ header {
     line-height: 30px !important;
     border-radius: 50%;
   }
+
   .login {
     @extend .flex;
     align-items: center;
     position: relative;
     padding: 25px 0;
     cursor: pointer;
+
     .login-info {
       font-weight: bold;
       padding-left: 10px;
+
       span {
         color: #333333;
         font-size: 12px;
@@ -60,6 +72,7 @@ header {
         font-weight: normal;
       }
     }
+
     .login-register {
       position: absolute;
       bottom: 0;
@@ -67,6 +80,7 @@ header {
       z-index: 99;
       visibility: hidden;
       transition: all 0.5s ease;
+
       ul {
         min-width: 200px;
         background-color: #fff;
@@ -75,13 +89,16 @@ header {
         border-top: 2px solid $color_title;
         right: 0;
         left: auto;
+
         li {
           line-height: 35px;
+
           a {
             padding: 0px 10px 5px;
             display: block;
             font-size: 15px;
           }
+
           &:hover {
             background: $color;
             color: #fff;
@@ -89,6 +106,7 @@ header {
         }
       }
     }
+
     &:hover {
       .login-register {
         bottom: -65px;
@@ -97,17 +115,21 @@ header {
       }
     }
   }
+
   .contact {
     @extend .flex-between;
     align-items: center;
     padding: 25px 0;
+
     .hotline {
       @extend .flex;
       align-items: center;
       position: relative;
+
       dd {
         font-weight: bold;
         padding-left: 10px;
+
         span {
           color: $color_title;
           font-size: 16px;
@@ -145,6 +167,7 @@ header {
         overflow: hidden;
         white-space: nowrap;
       }
+
       &:hover,
       &:focus {
         color: #fff;
@@ -154,16 +177,20 @@ header {
     }
   }
 }
+
 nav {
   background: #f2f2f2;
+
   ul {
     @extend .flex-between;
+
     > li {
       width: calc(100% / 6);
       line-height: 60px;
       text-align: center;
       transition: all 0.5s ease;
       position: relative;
+
       &::before {
         content: "";
         position: absolute;
@@ -173,6 +200,7 @@ nav {
         width: 2px;
         background: url(../img/menu_line.png);
       }
+
       &:last-child {
         &::after {
           content: "";
@@ -184,13 +212,16 @@ nav {
           background: url(../img/menu_line.png);
         }
       }
+
       a {
         font-size: 15px;
         transition: all 0.5s ease;
       }
+
       &.active,
       &:hover {
         background: $color_title;
+
         a {
           color: #ffffff;
         }
@@ -198,6 +229,7 @@ nav {
     }
   }
 }
+
 .search {
   position: relative;
   background: #fff;
@@ -205,6 +237,7 @@ nav {
   box-shadow: $box-shadow;
   width: 100%;
   margin: -55px 0 0;
+
   .search-plus {
     color: $color_title;
     position: absolute;
@@ -212,15 +245,18 @@ nav {
     right: 24px;
     bottom: 25px;
   }
+
   form {
     @extend .flex-between;
     padding: 25px 25px 60px;
     align-items: center;
+
     .form-group {
       &:not(:last-child) {
         width: 28%;
         position: relative;
       }
+
       &::before {
         position: absolute;
         z-index: 5;
@@ -230,14 +266,16 @@ nav {
         left: 1rem;
         color: $color;
       }
+
       button {
         width: 120px;
         border: 0;
         padding: 15px 0;
         background: $color;
         cursor: pointer;
-        &:hover{
-            background: $bg_title;
+
+        &:hover {
+          background: $bg_title;
         }
       }
 
@@ -301,55 +339,66 @@ nav {
           opacity: 1;
         }
       }
+
       select {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
         background: url(../img/arrow-down.png) no-repeat 95% 40%;
       }
+
       select::-ms-expand {
         display: none;
       }
     }
   }
 }
+
 .bottom-work {
   @extend .flex;
   align-items: center;
   justify-content: center;
   width: 100%;
+
   > li {
     width: 280px;
     position: relative;
     text-align: center;
     cursor: pointer;
     margin: 35px 0 45px;
+
     &:first-child {
       border-right: 1px solid #f2f2f2;
+
       span {
         background: url(../img/icon_personal.png) no-repeat right center;
       }
     }
+
     &:last-child {
       span {
         background: url(../img/icon_company.png) no-repeat right center;
       }
     }
+
     &:hover {
       &:first-child {
         span {
           background: url(../img/icon_personal.png) no-repeat -1px center;
         }
       }
+
       &:last-child {
         span {
           background: url(../img/icon_company.png) no-repeat -1px center;
         }
       }
+
       a {
         color: $color_title;
       }
     }
+
     span {
       padding: 30px 0 15px;
       width: 80px;
@@ -358,6 +407,7 @@ nav {
       margin: auto;
       transition: all 0.3s ease-in;
     }
+
     a {
       font-size: 17px;
       color: $color_txt;
@@ -368,29 +418,33 @@ nav {
     }
   }
 }
+
 .advanced-work-group {
   @extend .flex-between;
   padding: 20px 0;
 
   .advanced-group {
     width: 100%;
+
     .advanced-job {
       @extend .flex;
       width: 100%;
       box-sizing: border-box;
       padding: 0.5rem;
       position: relative;
+
       &:not(:last-child) {
-        &::before{
-            content: '';
-            border-bottom: 1px dashed #f2f2f2;
-            position: absolute;
-            bottom: 0;
-            left: 1%;
-            right: 3%;
-            width: 90%;
+        &::before {
+          content: "";
+          border-bottom: 1px dashed #f2f2f2;
+          position: absolute;
+          bottom: 0;
+          left: 1%;
+          right: 3%;
+          width: 90%;
         }
       }
+
       .job-image {
         border: 1px solid #f2f2f2;
         width: 18.5%;
@@ -399,6 +453,7 @@ nav {
         padding: 1%;
         margin-right: 2.5%;
         position: relative;
+
         .job-hot {
           position: absolute;
           color: #ffffff;
@@ -410,100 +465,261 @@ nav {
           line-height: 1.8;
         }
       }
+
       .job-content {
         width: calc(100% - 18.5% - 6%);
+
         h3 {
           font-size: 14px;
           font-weight: 500;
           transition: all 0.5s ease;
         }
+
         .name-company {
           font-size: 13px;
           text-transform: uppercase;
-          color: #666;
+          color: $color666;
         }
+
         ul {
           @extend .flex-between;
+
           > li {
             i {
               color: $color;
               font-size: 14px;
               margin-right: 5px;
             }
+
             font-size: 12px;
             color: #333333;
           }
         }
       }
-      &:hover{
-        .job-content{
-            h3{
-                color: $color_title;
-            }
+
+      &:hover {
+        .job-content {
+          h3 {
+            color: $color_title;
+          }
         }
       }
     }
   }
 }
+
 .advanced-work {
   .advanced {
     width: 100%;
     box-shadow: $box-shadow;
   }
 }
+
 .good-work {
-    margin-top: 45px;
-    .slick-dots{
-        bottom: 15px;
-    }
+  margin-top: 45px;
+
+  .slick-dots {
+    bottom: 15px;
+  }
+
   .advanced {
     box-shadow: $box-shadow;
     margin-left: -15px;
-    &.job-salary{
-        margin-top: 40px;
+
+    &.job-salary {
+      margin-top: 40px;
     }
+
+    &.job-goods {
+      .advanced-job {
+        .job-image {
+          opacity: 0;
+        }
+      }
+    }
+
     .advanced-work-group {
-        padding: 20px 0 30px;
+      padding: 10px 0 25px;
     }
   }
 }
-.typical-staff{
-    margin-right: -15px;
-    h2{
-        color: $color_title;
-    }
-    .staff-group{
-        margin-top: 30px;
-        box-shadow: $box-shadow;
-        .staff{
-            @extend .flex;
-            align-items: center;
-            padding: 0.5rem 0;
-            border-bottom: 1px dashed #f2f2f2;
-            margin: 0 0.5rem;
-            .staff-photo{
-                width: 25%;
-            }
-            .staff-content{
-                padding-left: 2%;
-                box-sizing: border-box;
-                width: 75%;
-                h3{
-                    font-size: 15px;
-                    font-weight: 500;
-                    padding-bottom: 1.7%;
-                }
-                dl{
-                   
-                    dt, dd{
-                        color: #666666;
-                        font-size: 14px;
-                    }
-                }
-            }
+
+.typical-staff {
+  margin-right: -15px;
+
+  h2 {
+    color: $color_title;
+    font-size: 25px;
+  }
+
+  .staff-group {
+    margin-top: 30px;
+    box-shadow: $box-shadow;
+
+    .staff {
+      @extend .flex;
+      align-items: center;
+      padding: 0.37rem 0;
+      border-bottom: 1px dashed #f2f2f2;
+      margin: 0 0.5rem;
+
+      .staff-photo {
+        width: 25%;
+      }
+
+      .staff-content {
+        padding-left: 2%;
+        box-sizing: border-box;
+        width: 75%;
+
+        h3 {
+          font-size: 15px;
+          font-weight: 500;
+          padding-bottom: 1.7%;
         }
+
+        dl {
+          dt,
+          dd {
+            color: $color666;
+            font-size: 14px;
+          }
+        }
+      }
     }
+  }
 }
+
+.mission {
+  background: url(../img/bg_city.jpg) no-repeat center center/cover;
+  padding-top: 50px;
+
+  h2,
+  h3 {
+    width: 100%;
+    text-align: center;
+  }
+
+  h2 {
+    color: $color_title;
+    margin-bottom: 10px;
+  }
+
+  &-title {
+    color: $color;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &-content {
+    .content-info {
+      background: #fff;
+      width: 54%;
+      padding: 3.5% 1.75%;
+      border-left: 1px solid $color_title;
+
+      h4 {
+        font-size: 22px;
+        font-weight: normal;
+        position: relative;
+        padding-bottom: 13px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 10%;
+          height: 2px;
+          background: $color_title;
+        }
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 39px;
+        color: $color666;
+      }
+    }
+    ul {
+      width: 472px;
+      height: 472px;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: $box-shadow;
+      position: relative;
+      overflow: hidden;
+      border: 12px solid #FFF;
+      > li {
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 50%;
+        transform-origin: 0% 100%;
+        border: 2px solid #fff;
+        box-sizing: border-box;
+        
+        a {
+          position: absolute;
+          left: -100%;
+          width: 200%;
+          height: 200%;
+          border-radius: 50%;
+          transition: all 0.5s ease-in;
+          
+        }
+        
+       
+        &:nth-child(1) {
+          transform: rotate(-60deg) skewY(30deg) scale(1.2);
+          a {
+            transform: skewY(-30deg); 
+            background: #ffe037;
+            &:hover{
+              background: $color_title;
+            }
+          }
+          
+        }
+        &:nth-child(2) {
+          transform: rotate(60deg) skewY(30deg) scale(1.2);
+          a {
+            transform: skewY(-30deg); 
+            background: #ffe037;
+            &:hover{
+              background: $color_title;
+            }
+          }
+        }
+        &:nth-child(3) {
+          transform: rotate(180deg) skewY(30deg) scale(1.2);
+          a {
+            transform: skewY(-30deg); 
+            background: #ffe037;
+            &:hover{
+              background: $color_title;
+          }
+          }
+        }
+      }
+    }
+  }
+
+  .slogan {
+    background: $color_title;
+    color: #ffffff;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    font-weight: normal;
+  }
+}
+
 @media only screen and (min-width: 767px) {
 }
 
