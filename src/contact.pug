@@ -1,0 +1,68 @@
+doctype html
+html(lang="vi")
+  head
+    title #{TITLE}
+    meta(charset="utf-8")
+    link(rel='icon', type='image/png', href='img/favicon.png')
+
+    meta(name="description" content="DESCRIPTION")
+    meta(name="keywords" content="KEYWORDS")
+    meta(name="format-detection" content="telephone=no")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.7.0/css/all.css', integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ', crossorigin='anonymous')
+    link(href="./templates/css/bootstrap-grid.css" rel="stylesheet")
+    link(href="./templates/css/style.css" rel="stylesheet")
+
+body
+  //- header
+  block header
+    include ./elements/_header.pug
+
+  section.bread-crumb
+    .container
+      .row
+        ul.breadcrumb
+          li.home
+            a(href='/')
+              span Trang chủ
+            span.mr_lr  / 
+          li
+            strong
+              span Liên hệ
+  section#contact.content
+    .container
+        .row
+            h2.title Liên hệ với chúng tôi
+        .pagelogin
+            form#contact(accept-charset='utf-8', action='/contact', method='post')
+                .row
+                    fieldset.col-lg-6.col-md-12.col-sm-12.col-xs-12.form-group
+                        label Họ và tên 
+                        input.form-control.form-control-lg(placeholder='Họ và tên', type='text', required='', value='', name='contact[Name]')
+                    fieldset.col-lg-6.col-md-12.col-sm-12.col-xs-12.form-group
+                        label Số điện thoại 
+                        input.form-control.form-control-lg(placeholder='Số điện thoại', type='text', required='', pattern='\d+', name='contact[Phone]', value='')
+                    fieldset.col-lg-6.col-md-12.col-sm-12.col-xs-12.form-group
+                        label Email 
+                        input#email1.form-control.form-control-lg(placeholder='Email', type='email', pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$', required='', value='', name='contact[email]')
+                    fieldset.col-lg-6.col-md-12.col-sm-12.col-xs-12.form-group
+                        label Địa chỉ 
+                        input.form-control.form-control-lg(placeholder='Địa chỉ', type='text', required='', name='contact[Address1]', value='')
+                    fieldset.col-lg-12.col-md-12.col-sm-12.col-xs-12.form-group
+                        label Nội dung 
+                        textarea#comment.form-control(placeholder='Nội dung', name='contact[body]', rows='5', required='')
+                    .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                        button.btn_register(type='submit') Gửi tin nhắn
+
+    .google-maps
+        iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d979.6388035882823!2d106.67952227214906!3d10.845310511090728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175298451960a6b%3A0x6beba7ae3a0953dd!2zVsOpIG3DoXkgYmF5IFRoYW5oIFTDuW5n!5e0!3m2!1sen!2s!4v1592500102694!5m2!1sen!2s', frameborder='0', style='border:0;', allowfullscreen='', aria-hidden='false', tabindex='0') 
+
+
+  //- footer
+  block footer
+    include ./elements/_footer.pug
+
+  script(src="./templates/js/jquery.js")
+  script(src="./templates/js/slick.min.js")
+  script(src="./templates/js/default.js")

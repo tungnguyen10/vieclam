@@ -233,8 +233,23 @@ nav {
 }
 .form-group {
   border: 0;
-  margin: 0;
-  padding: 0;
+  label{
+    font-weight: 400;
+    color: #323c42;
+    font-size: 14px;
+    margin-bottom: 11px;
+    display: block;
+    
+  }
+  .required{
+    color: $color_title;
+  }
+  textarea{
+    min-height: 100px;
+    padding: 10px 15px;
+    border-radius: 0 !important;
+    resize: none;
+  }
   .form-control {
     position: relative;
     display: block;
@@ -250,7 +265,8 @@ nav {
     background-clip: padding-box;
     border-radius: 0.25rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-
+    margin-bottom: 20px;
+    
     &::-ms-expand {
       background-color: transparent;
       border: 0;
@@ -345,6 +361,7 @@ nav {
       .form-control {
         box-shadow: $box-shadow;
         padding: 0.375rem 2.2rem 0.375rem 2.2rem;
+        margin-bottom: 0;
       }
       button {
         width: 120px;
@@ -898,12 +915,23 @@ nav {
   }
 }
 .page-login{
-  padding: 20px 15px 90px;
+
+  padding-top: 20px;
+  padding-bottom: 90px;
   h2{
     width: 100%;
   }
-  #login{
+  
+  .btn-link{
+    text-decoration: underline !important;
+    display: inline-block;
+    margin: 0 5px;
+    color:$color_title;
+  }
+  #login, .form-signup{
     width: 100%;
+    margin-top: 30px;
+    
   }
 }
 
@@ -1091,6 +1119,26 @@ footer {
     }
   }
 }
+
+
+.content{
+  h2{
+    margin-left: 15px;
+  }
+}
+#contact{
+  .pagelogin{
+    padding: 1rem 0 4rem;
+  }
+  .google-maps{
+    width: 100%;
+    height: 400px;
+    iframe{
+      width: 100%;
+      height: 100%;
+    }
+  }
+} 
 @media only screen and (min-width: 767px) {
 }
 

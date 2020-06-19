@@ -29,44 +29,47 @@ body
             span.mr_lr  / 
           li
             strong
-              span Đăng nhập
+              span Đăng ký
   .page-login.container
     .row
-      .col-lg-6
+      .col-12
         h2.title
-          span Đăng nhập tài khoản
+          span Đăng ký tài khoản
         #login
           form#customer_register(accept-charset='utf-8', action='/account/register', method='post')
             .form-signup.clearfix
               .row
-                .col-md-12.col-lg-12.col-sm-12.col-xs-12
+                .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                  fieldset.form-group
+                    label
+                      | Họ và tên
+                      span.required *
+                    input.form-control(placeholder='Họ và tên', type='text', required='', value='', name='contact[Name]')
+                .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                  fieldset.form-group
+                    label
+                      | Số điện thoại
+                      span.required *
+                    input.form-control.form-control-comment(placeholder='Số điện thoại', type='text', pattern='\d+', name='PhoneNumber', required='')
+              .row
+                .col-md-12.col-lg-6.col-sm-12.col-xs-12
                   fieldset.form-group
                     label
                       | Email
                       span.required *
                     input#email.form-control(type='email', pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$', value='', name='email', placeholder='Email', required='')
-                .col-md-12.col-lg-12.col-sm-12.col-xs-12
+                .col-md-12.col-lg-6.col-sm-12.col-xs-12
                   fieldset.form-group
                     label
                       | Mật khẩu 
                       span.required *
                     input#password.form-control(type='password', value='', name='password', placeholder='Mật khẩu', required='')
               .button_bottom
-                button.btn_register(type='submit', value='Đăng nhập') Đăng nhập
+                button.btn_register(type='submit', value='Đăng ký') Đăng ký
                 span.or
-                  | Bạn đã có tài khoản? Đăng ký
+                  | Bạn đã có tài khoản? Đăng nhập
                   a.btn-link(href='/login.html', style='text-decoration: underline;') tại đây
-      .col-lg-6
-        #recover-password.form-signup
-          label
-            | Bạn quên mật khẩu? Nhập địa chỉ email để lấy lại mật khẩu qua email.
-          form#recover_customer_password(accept-charset='utf-8', action='/account/recover', method='post')
-            .form-signup
-              fieldset.form-group
-                input#recover-email.form-control.form-control-lg(type='email', pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$', value='', name='Email', placeholder='Email', required='')
-            .action_bottom
-              input.btn_register(type='submit', value='Lấy lại mật khẩu')
-   
+          
 
   //- footer
   block footer
