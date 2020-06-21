@@ -41,7 +41,16 @@ fieldset{
     padding: 0 35px;
     border-radius: 0px;
     height: 45px;
+    transition: all 0.6s ease-out;
+    background: linear-gradient(to right, #f2b400 50%, #c02739 50%);
+    background-size: 206% 100%;
+    background-position: right bottom;
     cursor: pointer;
+    &:hover{
+        transition: all 0.5s ease-out;
+        background-position: left bottom;
+        border: 1px;
+    }
   }
 
 /*=============================================
@@ -168,5 +177,54 @@ ul {
         }
     }
 }
+.lag-mobile{
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    width: 10%;
+    li{
+        margin-bottom: -3px;
+        border: 1px solid #fff;
+        img{
+            object-fit: cover;
+        }
+    }
+}
+// Hover image
+/* Shine */
 
+.hover-img{
+    position: relative;
+  
+    &::before {
+      position: absolute;
+      top: 0;
+      left: -75%;
+      z-index: 2;
+      display: block;
+      content: '';
+      width: 50%;
+      height: 100%;
+      background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+      -webkit-transform: skewX(-25deg);
+      transform: skewX(-25deg);
+    }
+  
+    &:hover::before {
+      -webkit-animation: shine .75s;
+      animation: shine .75s;
+    }
+  }
+@-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
 

@@ -233,18 +233,17 @@ nav {
 }
 .form-group {
   border: 0;
-  label{
+  label {
     font-weight: 400;
     color: #323c42;
     font-size: 14px;
     margin-bottom: 11px;
     display: block;
-    
   }
-  .required{
+  .required {
     color: $color_title;
   }
-  textarea{
+  textarea {
     min-height: 100px;
     padding: 10px 15px;
     border-radius: 0 !important;
@@ -253,6 +252,7 @@ nav {
   .form-control {
     position: relative;
     display: block;
+    font-family: "Be Vietnam", sans-serif;
     width: 100%;
     height: 45px;
     padding: 0.375rem 20px;
@@ -266,7 +266,7 @@ nav {
     border-radius: 0.25rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     margin-bottom: 20px;
-    
+
     &::-ms-expand {
       background-color: transparent;
       border: 0;
@@ -404,9 +404,14 @@ nav {
 
     &:first-child {
       border-right: 1px solid #f2f2f2;
-
       span {
         background: url(../img/icon_personal.png) no-repeat right center;
+      }
+    }
+    &:nth-child(2) {
+      border-right: 1px solid #f2f2f2;
+      span {
+        background: url(../img/icon_dolla.png) no-repeat right center;
       }
     }
 
@@ -420,6 +425,11 @@ nav {
       &:first-child {
         span {
           background: url(../img/icon_personal.png) no-repeat -1px center;
+        }
+      }
+      &:nth-child(2) {
+        span {
+          background: url(../img/icon_dolla.png) no-repeat 0px center;
         }
       }
 
@@ -461,92 +471,92 @@ nav {
   .advanced-group {
     width: 100%;
 
-    .advanced-job {
+    
+  }
+}
+.advanced-job {
+  @extend .flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  position: relative;
+
+  &:not(:last-child) {
+    &::before {
+      content: "";
+      border-bottom: 1px dashed #f2f2f2;
+      position: absolute;
+      bottom: 0;
+      left: 1%;
+      right: 3%;
+      width: 90%;
+    }
+  }
+
+  .job-image {
+    border: 1px solid #f2f2f2;
+    width: 18.5%;
+    height: 18.5%;
+    box-sizing: border-box;
+    padding: 1%;
+    margin-right: 2.5%;
+    position: relative;
+
+    .job-hot {
+      position: absolute;
+      color: #ffffff;
+      font-size: 0.55rem;
+      padding: 0px 0.3rem 0.15rem;
+      background: #ff0000;
+      top: 0;
+      left: 0;
+      line-height: 1.8;
+    }
+  }
+
+  .job-content {
+    width: calc(100% - 18.5% - 6%);
+
+    h3 {
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.5s ease;
+    }
+
+    .name-company {
+      font-size: 13px;
+      text-transform: uppercase;
+      color: $color666;
+    }
+
+    ul {
       @extend .flex;
-      align-items: center;
-      width: 100%;
-      box-sizing: border-box;
-      padding: 0.5rem;
-      position: relative;
-
-      &:not(:last-child) {
-        &::before {
-          content: "";
-          border-bottom: 1px dashed #f2f2f2;
-          position: absolute;
-          bottom: 0;
-          left: 1%;
-          right: 3%;
-          width: 90%;
+      flex-wrap: wrap;
+      > li {
+        &:not(:last-child) {
+          margin-right: 0.6rem;
         }
-      }
-
-      .job-image {
-        border: 1px solid #f2f2f2;
-        width: 18.5%;
-        height: 18.5%;
-        box-sizing: border-box;
-        padding: 1%;
-        margin-right: 2.5%;
-        position: relative;
-
-        .job-hot {
-          position: absolute;
-          color: #ffffff;
-          font-size: 0.55rem;
-          padding: 0px 0.3rem 0.15rem;
-          background: #ff0000;
-          top: 0;
-          left: 0;
-          line-height: 1.8;
-        }
-      }
-
-      .job-content {
-        width: calc(100% - 18.5% - 6%);
-
-        h3 {
+        i {
+          color: $color;
           font-size: 14px;
-          font-weight: 500;
-          transition: all 0.5s ease;
+          margin-right: 5px;
         }
 
-        .name-company {
-          font-size: 13px;
-          text-transform: uppercase;
-          color: $color666;
-        }
-
-        ul {
-          @extend .flex;
-          flex-wrap: wrap;
-          > li {
-            &:not(:last-child) {
-              margin-right: 0.6rem;
-            }
-            i {
-              color: $color;
-              font-size: 14px;
-              margin-right: 5px;
-            }
-
-            font-size: 12px;
-            color: #333333;
-          }
-        }
+        font-size: 12px;
+        color: #333333;
       }
+    }
+  }
 
-      &:hover {
-        .job-content {
-          h3 {
-            color: $color_title;
-          }
-        }
+  &:hover {
+    .job-content {
+      h3 {
+        color: $color_title;
       }
     }
   }
 }
-
 .advanced-work {
   .advanced {
     width: 100%;
@@ -572,9 +582,6 @@ nav {
 
     &.job-goods {
       .advanced-job {
-        .job-image {
-          opacity: 0;
-        }
         .job-content {
           width: calc(100% - 6%);
         }
@@ -815,7 +822,7 @@ nav {
 }
 
 .service {
-  padding-bottom: 35px;
+  padding-bottom: 65px;
   .row {
     display: block;
   }
@@ -911,27 +918,28 @@ nav {
         display: block;
         overflow: hidden;
       }
+      &:hover {
+      }
     }
   }
 }
-.page-login{
-
+.page-login {
   padding-top: 20px;
   padding-bottom: 90px;
-  h2{
+  h2 {
     width: 100%;
   }
-  
-  .btn-link{
+
+  .btn-link {
     text-decoration: underline !important;
     display: inline-block;
     margin: 0 5px;
-    color:$color_title;
+    color: $color_title;
   }
-  #login, .form-signup{
+  #login,
+  .form-signup {
     width: 100%;
     margin-top: 30px;
-    
   }
 }
 
@@ -1077,13 +1085,13 @@ footer {
         font-weight: bold;
         text-decoration: none;
         color: $color;
-        &::before{
+        &::before {
           left: 50%;
           top: 50%;
           transform: translate(-50%, -50%);
         }
-        
-        i{
+
+        i {
           font-size: 22px;
           margin: 9px 0;
         }
@@ -1102,7 +1110,7 @@ footer {
           padding-left: 15px;
           box-shadow: 0 0 2px;
           padding-right: 30px;
-          i{
+          i {
             margin: 9px 10px;
             font-size: 20px;
           }
@@ -1111,35 +1119,52 @@ footer {
           }
         }
       }
-      #pagetop{
-        &:hover{
-          
+      #pagetop {
+        &:hover {
         }
       }
     }
   }
 }
 
-
-.content{
-  h2{
+.content {
+  h2 {
     margin-left: 15px;
   }
 }
-#contact{
-  .pagelogin{
+#contact {
+  .pagelogin {
     padding: 1rem 0 4rem;
   }
-  .google-maps{
+  .google-maps {
     width: 100%;
     height: 400px;
-    iframe{
+    iframe {
       width: 100%;
       height: 100%;
     }
   }
-} 
-@media only screen and (min-width: 767px) {
+}
+
+// Page List job
+
+.list-jobs{
+  padding: 0;
+  position: relative;
+  h2{
+    padding-bottom: 30px;
+  }
+  .list-job{
+    overflow: auto;
+    .advanced-job{
+      width: 50%;
+      float: left;
+    }
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
 }
 
 /*=============================================
@@ -1149,7 +1174,8 @@ footer {
 @media only screen and (max-width: 1280px) {
   .service {
     .slider-service {
-      .slick-next, .slick-prev{
+      .slick-next,
+      .slick-prev {
         margin-top: -8%;
       }
       .slick-prev {
@@ -1180,9 +1206,6 @@ footer {
       }
     }
   }
-  
- 
-  
 }
 
 @media only screen and (max-width: 1025px) {
@@ -1232,10 +1255,10 @@ footer {
   }
 }
 @media only screen and (max-width: 768px) {
-  .good-work .advanced{
+  .good-work .advanced {
     margin: 0 -15px;
   }
-  header .contact #language{
+  header .contact #language {
     position: absolute;
     right: 0;
     top: 3px;
@@ -1254,44 +1277,46 @@ footer {
   .search form .form-group:not(:last-child) {
     width: 25%;
     position: relative;
-}
+  }
   header {
     padding: 3% 0 1%;
   }
-  nav ul>li {
+  nav ul > li {
     line-height: 40px;
   }
-  nav ul>li a {
+  nav ul > li a {
     font-size: 12px;
-}
+  }
 
-  .search{
+  .search {
     margin: -3% 0 0 0;
   }
 
   .slider {
-    
-    img {
-      height: 40vw;
-      object-fit: cover;
+    .slider-banner {
+      img {
+        height: 40vw;
+        object-fit: cover;
+      }
     }
   }
 }
 @media only screen and (max-width: 767px) {
   header {
     padding: 3% 0 1%;
-    .contact #language{
+    .contact #language {
       position: relative;
       right: initial;
       top: initial;
     }
   }
-  
+
   .slider {
-    
-    img {
-      height: 40vw;
-      object-fit: cover;
+    .slider-banner {
+      img {
+        height: 40vw;
+        object-fit: cover;
+      }
     }
   }
   .hamburger {
@@ -1429,11 +1454,17 @@ footer {
     }
     ul {
       display: block;
-      padding-top: 10%;
+      padding-top: 5%;
       width: 80%;
       background: rgb(242, 242, 242);
       height: 100vh;
       overflow-y: scroll;
+      .logo-mobile {
+        background: #f2f2f2;
+        text-align: center;
+        width: 100%;
+        padding: 0 0 5%;
+      }
 
       > li {
         width: 100%;
@@ -1535,57 +1566,20 @@ footer {
   }
   .bottom-work {
     > li {
-      width: 280px;
-      position: relative;
-      text-align: center;
-      cursor: pointer;
-      margin: 35px 0 45px;
-
-      &:first-child {
-        border-right: 1px solid #f2f2f2;
-
-        span {
-          background: url(../img/icon_personal.png) no-repeat right center;
-        }
-      }
-
-      &:last-child {
-        span {
-          background: url(../img/icon_company.png) no-repeat right center;
-        }
-      }
-
-      &:hover {
-        &:first-child {
-          span {
-            background: url(../img/icon_personal.png) no-repeat -1px center;
-          }
-        }
-
-        &:last-child {
-          span {
-            background: url(../img/icon_company.png) no-repeat -1px center;
-          }
-        }
-      }
-
       span {
         padding: 30px 0 15px;
-        width: 80px;
-        height: 80px;
+        width: auto;
+        height: auto;
         display: block;
         transition: all 0.3s ease-in;
         margin: 0 auto 6%;
-      }
-
-      a {
-        padding-top: 5%;
+        background: none !important;
       }
     }
   }
   .typical-staff {
     margin: 5% 0 0;
-}
+  }
   .service {
     padding-bottom: 10%;
     h2 {
@@ -1634,15 +1628,6 @@ footer {
 }
 
 @media only screen and (max-width: 480px) {
-  .bottom-work > li a {
-    font-size: 3.7vw;
-  }
-  .slider {
-    img {
-      height: 40vw;
-      object-fit: cover;
-    }
-  }
 
   .title {
     font-size: 5.5vw;
@@ -1718,55 +1703,23 @@ footer {
     margin: 0 4%;
   }
   .bottom-work {
-    > li {
-      width: 280px;
-      position: relative;
-      text-align: center;
-      cursor: pointer;
-      margin: 35px 0 45px;
-
-      &:first-child {
-        border-right: 1px solid #f2f2f2;
-
-        span {
-          background: url(../img/icon_personal.png) no-repeat right center;
-        }
+    align-items: end;
+    li{
+      width: calc(100% / 3);
+      a{
+        font-size: 3.7vw;
+        line-height: 1.5;
       }
-
-      &:last-child {
-        span {
-          background: url(../img/icon_company.png) no-repeat right center;
+      span{
+        padding: 0;
+        width: 50%;
+        img{
+          width: 100%;
         }
-      }
-
-      &:hover {
-        &:first-child {
-          span {
-            background: url(../img/icon_personal.png) no-repeat -1px center;
-          }
-        }
-
-        &:last-child {
-          span {
-            background: url(../img/icon_company.png) no-repeat -1px center;
-          }
-        }
-      }
-
-      span {
-        padding: 30px 0 15px;
-        width: 80px;
-        height: 80px;
-        display: block;
-        transition: all 0.3s ease-in;
-        margin: 0 auto 6%;
-      }
-
-      a {
-        padding-top: 5%;
       }
     }
   }
+
   .mission {
     h2,
     h3 {
@@ -1865,7 +1818,11 @@ footer {
       }
     }
   }
-
+  .logo-mobile {
+    img {
+      width: 220px;
+    }
+  }
   .mission {
     .mission-content {
       display: block;
@@ -1883,6 +1840,11 @@ footer {
   }
 }
 @media only screen and (max-width: 320px) {
+  .logo-mobile {
+    img {
+      width: 190px;
+    }
+  }
   .mission {
     .mission-content {
       display: block;

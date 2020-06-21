@@ -4,10 +4,11 @@ $("#pagetop").click(function () {
 
 // BEGIN: SLIDER
 $(document).ready(function () {
+  
   $(".slider-banner").slick({
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 800,
     fade: false,
     arrows: false,
     cssEase: "linear",

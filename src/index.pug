@@ -24,9 +24,9 @@ body
   section.slider
     ul.slider-banner
       li
-        img(src='./templates/img/slider.jpg', alt='')
+        img(src='./templates/img/slider.jpg', alt='slider' )
       li
-        img(src='./templates/img/slider.jpg', alt='')
+        img(src='./templates/img/slider.jpg', alt='slider' )
     .container
       .row
         .search
@@ -113,11 +113,14 @@ body
                 |Tìm Kiếm Nâng Cao
         ul.bottom-work
           li: a(href="#")
-            span
-            |Dịch vụ tuyển dụng
+            span: img(src="./templates/img/icon_personal_mobile.png", alt="Việc làm tốt nhất").hidden-md.hidden-lg.hidden-sm
+            |Việc làm tốt nhất
           li: a(href="#")
-            span
-            |Dịch vụ việc làm
+            span: img(src="./templates/img/icon_dolla_mobile.png", alt="Việc làm tốt nhất").hidden-md.hidden-lg.hidden-sm
+            |Việc làm thu nhập cao
+          li: a(href="#")
+            span: img(src="./templates/img/icon_company_mobile.png", alt="Việc làm tốt nhất").hidden-md.hidden-lg.hidden-sm
+            |Nhà tuyển dụng
   
   section.advanced-work
     .container 
@@ -965,7 +968,7 @@ body
         h2.title đối tác của chúng tôi
 
         ul.list-partner
-          li: a(href="#"): img(src='./templates/img/tech.png', alt='partner')
+          li: a(href="#").hover-img: img(src='./templates/img/tech.png', alt='partner' )
           li: a(href="#"): img(src='./templates/img/acb.png', alt='partner')
           li: a(href="#"): img(src='./templates/img/ocb.png', alt='partner')
           li: a(href="#"): img(src='./templates/img/lienviet.png', alt='partner')
