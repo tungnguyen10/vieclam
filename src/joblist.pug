@@ -3,14 +3,14 @@ html(lang="vi")
   head
     title #{TITLE}
     meta(charset="utf-8")
-    link(rel='icon', type='image/png', href='img/favicon.png')
+    link(rel='icon' type='image/png' href='img/favicon.png')
 
     meta(name="description" content="DESCRIPTION")
     meta(name="keywords" content="KEYWORDS")
     meta(name="format-detection" content="telephone=no")
-    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
 
-    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.7.0/css/all.css', integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ', crossorigin='anonymous')
+    link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous')
     link(href="./templates/css/bootstrap-grid.css" rel="stylesheet")
     link(href="./templates/css/slick.css" rel="stylesheet")
     link(href="./templates/css/slick-theme.css" rel="stylesheet")
@@ -24,15 +24,15 @@ body
   section.slider
     ul.slider-banner
       li
-        img(src='./templates/img/slider.jpg', alt='slider' )
+        img(src='./templates/img/slider.jpg' alt='slider' )
       li
-        img(src='./templates/img/slider.jpg', alt='slider' )
+        img(src='./templates/img/slider.jpg' alt='slider' )
     .container
       .row
         .search
           form#search
             .form-group.fas.fa-search
-              input.form-control(type='email', placeholder='Chức danh, kỹ năng, tên công ty')
+              input.form-control(type='email' placeholder='Chức danh, kỹ năng, tên công ty')
             .form-group.far.fa-list-alt
               select#allwork.form-control
                 option(value='') Tất cả ngành nghề
@@ -42,7 +42,7 @@ body
                 option(value='volvo') 5
             .form-group.fas.fa-map-marker-alt
               select#allcity.form-control
-                option(value='', selected='selected') Tất cả địa điểm
+                option(value='' selected='selected') Tất cả địa điểm
                 option(value='An Giang') An Giang
                 option(value='Vũng Tàu') Vũng Tàu
                 option(value='Bắc Giang') Bắc Giang
@@ -107,11 +107,11 @@ body
                 option(value='Vĩnh Phúc') Vĩnh Phúc
                 option(value='Yên Bái') Yên Bái
             .form-group
-              button(type='submit', form='search', value='Submit') Tìm việc
+              button(type='submit' form='search' value='Submit') Tìm việc
               p.search-plus: a(href="#")
                 i.fas.fa-search-plus 
                 |Tìm Kiếm Nâng Cao
-        
+
   section.bread-crumb
     .container
       .row
@@ -123,226 +123,374 @@ body
           li
             strong
               span Danh sách việc làm
-  
+
   section.list-jobs
     .container 
       .row
         .col-md-9
+          .box-jobs
             h2.title Thông Tin Tuyển Dụng Mới Nhất
             .list-job
-                .advanced-job
-                    .job-image
-                        a(href="#")
-                            img(src="./templates/img/job_logo.png", alt="logo job")
-                        .job-hot NEW
+              .advanced-job
+                .job-image
+                  a(href="#")
+                    img(src="./templates/img/job_logo.png" alt="logo job")
+                  .job-hot NEW
 
-                    .job-content
-                        h3: a(href="#") Nhân Viên Thu Mua
-                        .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
-                        ul.job-salary
-                            li
-                                i.fas.fa-dollar-sign
-                                |15-20 triệu
-                            li
-                                i.fas.fa-map-marker-alt
-                                |Hồ Chí Minh
-                            li
-                                i.far.fa-clock
-                                |02-03-2020
-                .advanced-job
-                    .job-image: a(href="#"): img(src="./templates/img/job_logo.png", alt="logo job")
-                    .job-content
-                        h3: a(href="#") Nhân Viên Thu Mua
-                        .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
-                        ul.job-salary
-                            li
-                                i.fas.fa-dollar-sign
-                                |15-20 triệu
-                            li
-                                i.fas.fa-map-marker-alt
-                                |Hồ Chí Minh
-                            li
-                                i.far.fa-clock
-                                |02-03-2020
-                .advanced-job
-                    .job-image
-                        a(href="#")
-                            img(src="./templates/img/job_logo.png", alt="logo job")
-                        .job-hot NEW
-                    .job-content
-                        h3: a(href="#") Nhân Viên Thu Mua
-                        .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
-                        ul.job-salary
-                            li
-                                i.fas.fa-dollar-sign
-                                |15-20 triệu
-                            li
-                                i.fas.fa-map-marker-alt
-                                |Hồ Chí Minh
-                            li
-                                i.far.fa-clock
-                                |02-03-2020
-                .advanced-job
-                    .job-image
-                        a(href="#")
-                            img(src="./templates/img/job_logo.png", alt="logo job")
-                        .job-hot NEW
+                .job-content
+                  h3: a(href="#") Nhân Viên Thu Mua
+                  .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
+                  ul.job-salary
+                    li
+                      i.fas.fa-dollar-sign
+                      |15-20 triệu
+                    li
+                      i.fas.fa-map-marker-alt
+                      |Hồ Chí Minh
+                    li
+                      i.far.fa-clock
+                      |02-03-2020
+              .advanced-job
+                .job-image: a(href="#"): img(src="./templates/img/job_logo.png" alt="logo job")
+                .job-content
+                  h3: a(href="#") Nhân Viên Thu Mua
+                  .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
+                  ul.job-salary
+                    li
+                      i.fas.fa-dollar-sign
+                      |15-20 triệu
+                    li
+                      i.fas.fa-map-marker-alt
+                      |Hồ Chí Minh
+                    li
+                      i.far.fa-clock
+                      |02-03-2020
+              .advanced-job
+                .job-image
+                  a(href="#")
+                    img(src="./templates/img/job_logo.png" alt="logo job")
+                  .job-hot NEW
+                .job-content
+                  h3: a(href="#") Nhân Viên Thu Mua
+                  .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
+                  ul.job-salary
+                    li
+                      i.fas.fa-dollar-sign
+                      |15-20 triệu
+                    li
+                      i.fas.fa-map-marker-alt
+                      |Hồ Chí Minh
+                    li
+                      i.far.fa-clock
+                      |02-03-2020
+              .advanced-job
+                .job-image
+                  a(href="#")
+                    img(src="./templates/img/job_logo.png" alt="logo job")
+                  .job-hot NEW
 
-                    .job-content
-                        h3: a(href="#") Nhân Viên Thu Mua
-                        .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
-                        ul.job-salary
-                            li
-                                i.fas.fa-dollar-sign
-                                |15-20 triệu
-                            li
-                                i.fas.fa-map-marker-alt
-                                |Hồ Chí Minh
-                            li
-                                i.far.fa-clock
-                                |02-03-2020
-                .advanced-job
-                    .job-image: a(href="#"): img(src="./templates/img/job_logo.png", alt="logo job")
-                    .job-content
-                        h3: a(href="#") Nhân Viên Thu Mua
-                        .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
-                        ul.job-salary
-                            li
-                                i.fas.fa-dollar-sign
-                                |15-20 triệu
-                            li
-                                i.fas.fa-map-marker-alt
-                                |Hồ Chí Minh
-                            li
-                                i.far.fa-clock
-                                |02-03-2020
-                .advanced-job
-                    .job-image
-                        a(href="#")
-                            img(src="./templates/img/job_logo.png", alt="logo job")
-                        .job-hot NEW
-                    .job-content
-                        h3: a(href="#") Nhân Viên Thu Mua
-                        .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
-                        ul.job-salary
-                            li
-                                i.fas.fa-dollar-sign
-                                |15-20 triệu
-                            li
-                                i.fas.fa-map-marker-alt
-                                |Hồ Chí Minh
-                            li
-                                i.far.fa-clock
-                                |02-03-2020
-                .advanced-job
-                    .job-image
-                        a(href="#")
-                            img(src="./templates/img/job_logo.png", alt="logo job")
-                        .job-hot NEW
+                .job-content
+                  h3: a(href="#") Nhân Viên Thu Mua
+                  .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
+                  ul.job-salary
+                    li
+                      i.fas.fa-dollar-sign
+                      |15-20 triệu
+                    li
+                      i.fas.fa-map-marker-alt
+                      |Hồ Chí Minh
+                    li
+                      i.far.fa-clock
+                      |02-03-2020
+              .advanced-job
+                .job-image: a(href="#"): img(src="./templates/img/job_logo.png" alt="logo job")
+                .job-content
+                  h3: a(href="#") Nhân Viên Thu Mua
+                  .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
+                  ul.job-salary
+                    li
+                      i.fas.fa-dollar-sign
+                      |15-20 triệu
+                    li
+                      i.fas.fa-map-marker-alt
+                      |Hồ Chí Minh
+                    li
+                      i.far.fa-clock
+                      |02-03-2020
+              .advanced-job
+                .job-image
+                  a(href="#")
+                    img(src="./templates/img/job_logo.png" alt="logo job")
+                  .job-hot NEW
+                .job-content
+                  h3: a(href="#") Nhân Viên Thu Mua
+                  .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
+                  ul.job-salary
+                    li
+                      i.fas.fa-dollar-sign
+                      |15-20 triệu
+                    li
+                      i.fas.fa-map-marker-alt
+                      |Hồ Chí Minh
+                    li
+                      i.far.fa-clock
+                      |02-03-2020
+              .advanced-job
+                .job-image
+                  a(href="#")
+                    img(src="./templates/img/job_logo.png" alt="logo job")
+                  .job-hot NEW
 
-                    .job-content
-                        h3: a(href="#") Nhân Viên Thu Mua
-                        .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
-                        ul.job-salary
-                            li
-                                i.fas.fa-dollar-sign
-                                |15-20 triệu
-                            li
-                                i.fas.fa-map-marker-alt
-                                |Hồ Chí Minh
-                            li
-                                i.far.fa-clock
-                                |02-03-2020
-                .advanced-job
-                    .job-image: a(href="#"): img(src="./templates/img/job_logo.png", alt="logo job")
-                    .job-content
-                        h3: a(href="#") Nhân Viên Thu Mua
-                        .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
-                        ul.job-salary
-                            li
-                                i.fas.fa-dollar-sign
-                                |15-20 triệu
-                            li
-                                i.fas.fa-map-marker-alt
-                                |Hồ Chí Minh
-                            li
-                                i.far.fa-clock
-                                |02-03-2020
-                .advanced-job
-                    .job-image
-                        a(href="#")
-                            img(src="./templates/img/job_logo.png", alt="logo job")
-                        .job-hot NEW
-                    .job-content
-                        h3: a(href="#") Nhân Viên Thu Mua
-                        .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
-                        ul.job-salary
-                            li
-                                i.fas.fa-dollar-sign
-                                |15-20 triệu
-                            li
-                                i.fas.fa-map-marker-alt
-                                |Hồ Chí Minh
-                            li
-                                i.far.fa-clock
-                                |02-03-2020
-                .advanced-job
-                    .job-image
-                        a(href="#")
-                            img(src="./templates/img/job_logo.png", alt="logo job")
-                        .job-hot NEW
+                .job-content
+                  h3: a(href="#") Nhân Viên Thu Mua
+                  .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
+                  ul.job-salary
+                    li
+                      i.fas.fa-dollar-sign
+                      |15-20 triệu
+                    li
+                      i.fas.fa-map-marker-alt
+                      |Hồ Chí Minh
+                    li
+                      i.far.fa-clock
+                      |02-03-2020
+              .advanced-job
+                .job-image: a(href="#"): img(src="./templates/img/job_logo.png" alt="logo job")
+                .job-content
+                  h3: a(href="#") Nhân Viên Thu Mua
+                  .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
+                  ul.job-salary
+                    li
+                      i.fas.fa-dollar-sign
+                      |15-20 triệu
+                    li
+                      i.fas.fa-map-marker-alt
+                      |Hồ Chí Minh
+                    li
+                      i.far.fa-clock
+                      |02-03-2020
+              .advanced-job
+                .job-image
+                  a(href="#")
+                    img(src="./templates/img/job_logo.png" alt="logo job")
+                  .job-hot NEW
+                .job-content
+                  h3: a(href="#") Nhân Viên Thu Mua
+                  .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
+                  ul.job-salary
+                    li
+                      i.fas.fa-dollar-sign
+                      |15-20 triệu
+                    li
+                      i.fas.fa-map-marker-alt
+                      |Hồ Chí Minh
+                    li
+                      i.far.fa-clock
+                      |02-03-2020
+              .advanced-job
+                .job-image
+                  a(href="#")
+                    img(src="./templates/img/job_logo.png" alt="logo job")
+                  .job-hot NEW
 
-                    .job-content
-                        h3: a(href="#") Nhân Viên Thu Mua
-                        .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
-                        ul.job-salary
-                            li
-                                i.fas.fa-dollar-sign
-                                |15-20 triệu
-                            li
-                                i.fas.fa-map-marker-alt
-                                |Hồ Chí Minh
-                            li
-                                i.far.fa-clock
-                                |02-03-2020
-                .advanced-job
-                    .job-image: a(href="#"): img(src="./templates/img/job_logo.png", alt="logo job")
-                    .job-content
-                        h3: a(href="#") Nhân Viên Thu Mua
-                        .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
-                        ul.job-salary
-                            li
-                                i.fas.fa-dollar-sign
-                                |15-20 triệu
-                            li
-                                i.fas.fa-map-marker-alt
-                                |Hồ Chí Minh
-                            li
-                                i.far.fa-clock
-                                |02-03-2020
-                .advanced-job
-                    .job-image
-                        a(href="#")
-                            img(src="./templates/img/job_logo.png", alt="logo job")
-                        .job-hot NEW
-                    .job-content
-                        h3: a(href="#") Nhân Viên Thu Mua
-                        .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
-                        ul.job-salary
-                            li
-                                i.fas.fa-dollar-sign
-                                |15-20 triệu
-                            li
-                                i.fas.fa-map-marker-alt
-                                |Hồ Chí Minh
-                            li
-                                i.far.fa-clock
-                                |02-03-2020
+                .job-content
+                  h3: a(href="#") Nhân Viên Thu Mua
+                  .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
+                  ul.job-salary
+                    li
+                      i.fas.fa-dollar-sign
+                      |15-20 triệu
+                    li
+                      i.fas.fa-map-marker-alt
+                      |Hồ Chí Minh
+                    li
+                      i.far.fa-clock
+                      |02-03-2020
+              .advanced-job
+                .job-image: a(href="#"): img(src="./templates/img/job_logo.png" alt="logo job")
+                .job-content
+                  h3: a(href="#") Nhân Viên Thu Mua
+                  .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
+                  ul.job-salary
+                    li
+                      i.fas.fa-dollar-sign
+                      |15-20 triệu
+                    li
+                      i.fas.fa-map-marker-alt
+                      |Hồ Chí Minh
+                    li
+                      i.far.fa-clock
+                      |02-03-2020
+              .advanced-job
+                .job-image
+                  a(href="#")
+                    img(src="./templates/img/job_logo.png" alt="logo job")
+                  .job-hot NEW
+                .job-content
+                  h3: a(href="#") Nhân Viên Thu Mua
+                  .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
+                  ul.job-salary
+                    li
+                      i.fas.fa-dollar-sign
+                      |15-20 triệu
+                    li
+                      i.fas.fa-map-marker-alt
+                      |Hồ Chí Minh
+                    li
+                      i.far.fa-clock
+                      |02-03-2020
+              .advanced-job
+                .job-image
+                  a(href="#")
+                    img(src="./templates/img/job_logo.png" alt="logo job")
+                  .job-hot NEW
 
+                .job-content
+                  h3: a(href="#") Nhân Viên Thu Mua
+                  .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
+                  ul.job-salary
+                    li
+                      i.fas.fa-dollar-sign
+                      |15-20 triệu
+                    li
+                      i.fas.fa-map-marker-alt
+                      |Hồ Chí Minh
+                    li
+                      i.far.fa-clock
+                      |02-03-2020
+              .advanced-job
+                .job-image: a(href="#"): img(src="./templates/img/job_logo.png" alt="logo job")
+                .job-content
+                  h3: a(href="#") Nhân Viên Thu Mua
+                  .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
+                  ul.job-salary
+                    li
+                      i.fas.fa-dollar-sign
+                      |15-20 triệu
+                    li
+                      i.fas.fa-map-marker-alt
+                      |Hồ Chí Minh
+                    li
+                      i.far.fa-clock
+                      |02-03-2020
+              .advanced-job
+                .job-image
+                  a(href="#")
+                    img(src="./templates/img/job_logo.png" alt="logo job")
+                  .job-hot NEW
+                .job-content
+                  h3: a(href="#") Nhân Viên Thu Mua
+                  .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
+                  ul.job-salary
+                    li
+                      i.fas.fa-dollar-sign
+                      |15-20 triệu
+                    li
+                      i.fas.fa-map-marker-alt
+                      |Hồ Chí Minh
+                    li
+                      i.far.fa-clock
+                      |02-03-2020
+              .advanced-job
+                .job-image
+                  a(href="#")
+                    img(src="./templates/img/job_logo.png" alt="logo job")
+                  .job-hot NEW
+                .job-content
+                  h3: a(href="#") Nhân Viên Thu Mua
+                  .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
+                  ul.job-salary
+                    li
+                      i.fas.fa-dollar-sign
+                      |15-20 triệu
+                    li
+                      i.fas.fa-map-marker-alt
+                      |Hồ Chí Minh
+                    li
+                      i.far.fa-clock
+                      |02-03-2020
+              .advanced-job
+                .job-image
+                  a(href="#")
+                    img(src="./templates/img/job_logo.png" alt="logo job")
+                  .job-hot NEW
+                .job-content
+                  h3: a(href="#") Nhân Viên Thu Mua
+                  .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
+                  ul.job-salary
+                    li
+                      i.fas.fa-dollar-sign
+                      |15-20 triệu
+                    li
+                      i.fas.fa-map-marker-alt
+                      |Hồ Chí Minh
+                    li
+                      i.far.fa-clock
+                      |02-03-2020
+              .advanced-job
+                .job-image
+                  a(href="#")
+                    img(src="./templates/img/job_logo.png" alt="logo job")
+                  .job-hot NEW
+                .job-content
+                  h3: a(href="#") Nhân Viên Thu Mua
+                  .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
+                  ul.job-salary
+                    li
+                      i.fas.fa-dollar-sign
+                      |15-20 triệu
+                    li
+                      i.fas.fa-map-marker-alt
+                      |Hồ Chí Minh
+                    li
+                      i.far.fa-clock
+                      |02-03-2020
+              .advanced-job
+                .job-image
+                  a(href="#")
+                    img(src="./templates/img/job_logo.png" alt="logo job")
+                  .job-hot NEW
+                .job-content
+                  h3: a(href="#") Nhân Viên Thu Mua
+                  .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
+                  ul.job-salary
+                    li
+                      i.fas.fa-dollar-sign
+                      |15-20 triệu
+                    li
+                      i.fas.fa-map-marker-alt
+                      |Hồ Chí Minh
+                    li
+                      i.far.fa-clock
+                      |02-03-2020
+              .advanced-job
+                .job-image
+                  a(href="#")
+                    img(src="./templates/img/job_logo.png" alt="logo job")
+                  .job-hot NEW
+                .job-content
+                  h3: a(href="#") Nhân Viên Thu Mua
+                  .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
+                  ul.job-salary
+                    li
+                      i.fas.fa-dollar-sign
+                      |15-20 triệu
+                    li
+                      i.fas.fa-map-marker-alt
+                      |Hồ Chí Minh
+                    li
+                      i.far.fa-clock
+                      |02-03-2020
+
+          //- jobnews
+          block jobnews
+            include ./elements/_jobnew.pug
+        
         .col-md-3
+          block filter
+            include ./elements/_filter.pug
 
-
-
+  
   //- footer
   block footer
     include ./elements/_footer.pug

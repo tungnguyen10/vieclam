@@ -9,7 +9,16 @@ $bgborder: #f2f2f2;
 $color_txt: #333;
 $color666: #666;
 $box-shadow: 0px 0px 8px 1px #cecece;
-
+.redColor {
+  color: $color_title;
+}
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  z-index: 9999;
+}
 .flex {
   display: flex;
 }
@@ -181,8 +190,8 @@ header {
 }
 
 nav {
+  position: relative;
   background: #f2f2f2;
-
   ul {
     @extend .flex-between;
 
@@ -470,8 +479,6 @@ nav {
 
   .advanced-group {
     width: 100%;
-
-    
   }
 }
 .advanced-job {
@@ -1148,21 +1155,226 @@ footer {
 
 // Page List job
 
-.list-jobs{
+.list-jobs {
   padding: 0;
   position: relative;
-  h2{
+  
+  .box-jobs {
+    h2 {
+      padding-bottom: 30px;
+    }
+    .list-job {
+      overflow: auto;
+      .job-image {
+        display: none;
+      }
+
+      .advanced-job {
+        width: 50%;
+        float: left;
+      }
+    }
+  }
+}
+.box-jobs_new {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  h2 {
     padding-bottom: 30px;
   }
-  .list-job{
-    overflow: auto;
-    .advanced-job{
-      width: 50%;
-      float: left;
+  .advanced-job {
+    align-items: end;
+    padding: 0.75rem 0;
+    .job-image {
+      width: 15%;
+      height: auto;
+    }
+  }
+}
+.filter {
+  button.btn-clear-filters {
+    color: #333;
+    background-color: $color;
+    border-color: #adadad;
+    border: 0;
+    width: 100%;
+    font-size: 17px;
+    padding: 13px 0;
+    transition: all 0.8s ease;
+    cursor: pointer;
+    &:hover {
+      background: $color_title;
+      color: #fff;
+    }
+  }
+  .filter-title {
+    h4 {
+      font-size: 18px;
+      padding-bottom: 10px;
+      font-weight: 500;
+      margin-top: 20px;
+    }
+  }
+  .list-unstyled {
+    font-size: 15px;
+    .checkbox {
+      position: relative;
+      display: block;
+      margin-top: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+      input {
+        margin-right: 5px;
+      }
+    }
+  }
+  .slimScrollDiv {
+    position: relative;
+    overflow: hidden;
+    width: auto;
+    height: 200px;
+    .filter-body {
+      overflow-y: scroll;
+      height: 200px;
+      &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+        border-radius: 10px;
+        background-color: #fff;
+      }
+
+      &::-webkit-scrollbar {
+        width: 10px;
+        background-color: #fff;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+        background-color: #f2f2f2;
+      }
     }
   }
 }
 
+// Page detail job
+.detail-jobs {
+  .box-detail {
+    color: #333333;
+    box-shadow: $box-shadow;
+    padding: 40px 20px 15px;
+    h2 {
+      font-weight: 500;
+      padding-bottom: 10px;
+    }
+    h3 {
+      font-size: 22px;
+      font-weight: 300;
+      padding-bottom: 10px;
+      font-family: "Oswald", sans-serif;
+    }
+    .job-salary {
+      @extend .flex;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+      > li {
+        &:not(:last-child) {
+          margin-right: 0.6rem;
+        }
+        i {
+          color: $color;
+          font-size: 14px;
+          margin-right: 5px;
+        }
+
+        font-size: 12px;
+        color: #333333;
+      }
+    }
+    .job_description {
+      .job_reason,
+      .job_des,
+      .skills_experience,
+      .love_working_here,
+      .apply_job {
+        margin-bottom: 30px;
+        ul,
+        p {
+          padding: 0 20px;
+          line-height: 1.5;
+        }
+        ul {
+          li {
+            list-style: inside;
+            line-height: 1.5;
+          }
+        }
+      }
+      .apply_job {
+        p {
+          padding: 5px 0 15px;
+        }
+      }
+    }
+  }
+  .inside-company {
+    background: $bgborder;
+    box-shadow: $box-shadow;
+    padding: 10px;
+    .logo-company {
+      background: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .employer-info {
+      .name {
+        @extend .title;
+        text-align: center;
+        padding: 15px 0;
+      }
+      .basic-info {
+        .short {
+          padding-bottom: 15px;
+        }
+        span {
+          text-align: left;
+          padding: 3px 10px;
+        }
+        .icon-info {
+          display: table;
+          width: 100%;
+          i,
+          span {
+            display: table-cell;
+            vertical-align: middle;
+          }
+          i {
+            font-size: 17px;
+            color: $color;
+            width: 24px;
+          }
+        }
+      }
+    }
+    .employer-profile {
+      text-align: center;
+      padding: 15px 0;
+      a {
+        color: #ea2635;
+        text-decoration: none;
+        border-bottom: 1px dotted #ea2635;
+        outline: none;
+        display: inline-block;
+        margin-right: 5px;
+      }
+      i {
+        color: #ea2635;
+      }
+    }
+  }
+}
 
 @media only screen and (min-width: 768px) {
 }
@@ -1628,7 +1840,6 @@ footer {
 }
 
 @media only screen and (max-width: 480px) {
-
   .title {
     font-size: 5.5vw;
   }
@@ -1704,16 +1915,16 @@ footer {
   }
   .bottom-work {
     align-items: end;
-    li{
+    li {
       width: calc(100% / 3);
-      a{
+      a {
         font-size: 3.7vw;
         line-height: 1.5;
       }
-      span{
+      span {
         padding: 0;
         width: 50%;
-        img{
+        img {
           width: 100%;
         }
       }

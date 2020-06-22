@@ -1,0 +1,164 @@
+doctype html
+html(lang="vi")
+  head
+    title #{TITLE}
+    meta(charset="utf-8")
+    link(rel='icon' type='image/png' href='img/favicon.png')
+
+    meta(name="description" content="DESCRIPTION")
+    meta(name="keywords" content="KEYWORDS")
+    meta(name="format-detection" content="telephone=no")
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+
+    link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous')
+    link(href="./templates/css/bootstrap-grid.css" rel="stylesheet")
+    link(href="./templates/css/slick.css" rel="stylesheet")
+    link(href="./templates/css/slick-theme.css" rel="stylesheet")
+    link(href="./templates/css/style.css" rel="stylesheet")
+
+body
+  //- header
+  block header
+    include ./elements/_header.pug
+
+  section.bread-crumb
+    .container
+      .row
+        ul.breadcrumb
+          li.home
+            a(href='/')
+              span Trang chủ 
+            span.mr_lr  / 
+          li
+            a(href='/')
+              span Danh sách việc làm
+            span.mr_lr  / 
+          li
+            strong
+              span Chi tiết việc làm
+
+  section.detail-jobs
+    .container 
+      .row
+        .col-md-9
+          .box-detail
+            h2.title CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND
+            ul.job-salary
+              li
+                i.fas.fa-dollar-sign
+                |15-20 triệu
+              li
+                i.fas.fa-map-marker-alt
+                |Hồ Chí Minh
+              li
+                i.far.fa-clock
+                |02-03-2020
+
+            .job_description
+              .job_reason
+                h3 Lý do để gia nhập công ty
+                ul
+                  li Tháng lương 14 và hơn thế nữa
+                  li Liên tục thưởng: dự án/đột xuất/ý tưởng/lễ tết....
+                  li Môi trường làm việc “Bao vui” “Bao máu lửa”.
+              .job_des
+                h3 Mô tả công việc
+                ul
+                  li Tư vấn, xây dựng giải pháp và kiến trúc trên nền tảng sử dụng ngôn ngữ PHP và Framework thích hợp để tạo ra những hệ thống Web và phần mềm tối ưu theo yêu cầu của khách hàng
+                  li Quản lý tiến độ công việc của nhóm
+                  li Môi trường làm việc “Bao vui” “Bao máu lửa”.
+                  li Có trách nhiệm đối với thành công của dự án.
+
+
+              .skills_experience
+                h3 Yêu cầu công việc
+                h4 Yêu cầu bắt buộc:
+                ul
+                  li Tư vấn, xây dựng giải pháp và kiến trúc trên nền tảng sử dụng ngôn ngữ PHP và Framework thích hợp để tạo ra những hệ thống Web và phần mềm tối ưu theo yêu cầu của khách hàng
+                  li Quản lý tiến độ công việc của nhóm
+                  li Môi trường làm việc “Bao vui” “Bao máu lửa”.
+                  li Có trách nhiệm đối với thành công của dự án.
+
+                h4 Yêu cầu ưu tiên:
+                ul
+                  li Tư vấn, xây dựng giải pháp và kiến trúc trên nền tảng sử dụng ngôn ngữ PHP và Framework thích hợp để tạo ra những hệ thống Web và phần mềm tối ưu theo yêu cầu của khách hàng
+                  li Quản lý tiến độ công việc của nhóm
+                  li Môi trường làm việc “Bao vui” “Bao máu lửa”.
+                  li Có trách nhiệm đối với thành công của dự án.
+              .love_working_here
+                h3 Tại Sao Bạn Sẽ Yêu Thích Làm Việc Tại Đây
+                p Our Company believes that motivation & personality of the employees are the only shortcut to the promotion of the corporate and contributions to the society. We will try our best to create a corporate environment where all employees can realize their dreams and goals. Featured benefits include: 
+                  br
+                  | - Join the dynamic, young and friendly project team 
+                  br
+                  | - Attend project training before working with clients directly if need 
+                  br
+                  | - Have the stable career path 
+                  br
+                  | - Competitive salary 
+                  br
+                  strong - 13-month salary
+                  br
+                  strong - Annual project bonus
+                  br
+                  strong - Union bonus on 1 Jan, 30 Apr and 2 Sep
+                  br
+                  | - 
+                  strong Onsite in Japan, Asean
+                  br
+                  | - Full Insurance according to labor law
+                  br
+                  | - Health Care 24/7 package
+                  br
+                  | - Special allowance for seniority employee, leader.
+                  br
+                  strong - Special TTV's sharing package
+                  br
+                  | - Outdoor activities (movies day, play football,company trip, ...)
+              .apply_job
+                h3 Liên hệ tuyển dụng
+                p.redColor Vui lòng ứng tuyển công việc để xem được thông tin liên hệ
+                .btn_register
+                  a.apply_now(rel='nofollow', href='#') Đăng nhập
+        
+          //- jobnews
+          block jobnews
+            include ./elements/_jobnew.pug
+
+        .col-md-3
+          .inside-company
+            .logo-company
+              a(href='#')
+                img(alt='Techcombank Vietnam Big Logo', src='./templates/img/techcom.png')
+            .employer-info
+              h3.name
+                a(href='#') Techcombank
+              .basic-info
+                .short
+                  div Trở thành Ngân hàng tốt nhất và doanh nghiệp hàng đầu Việt Nam
+                .gear-icon.icon-info
+                  i.fas.fa-cog 
+                  span Sản phẩm
+                .groups-icon.icon-info
+                  i.fas.fa-users
+                  span 1000+
+                .country-icon
+                  i.flag.flag-vn
+                  span.country-name Vietnam
+                .working-date.icon-info
+                  i.far.fa-calendar-alt
+                  span Thứ 2 - Thứ 6
+                .overtime.icon-info
+                  i.far.fa-clock
+                  span Không có OT
+            .employer-profile
+              a(href='#') Về chúng tôi
+              i.fas.fa-caret-right
+
+  //- footer
+  block footer
+    include ./elements/_footer.pug
+
+  script(src="./templates/js/jquery.js")
+  script(src="./templates/js/slick.min.js")
+  script(src="./templates/js/default.js")

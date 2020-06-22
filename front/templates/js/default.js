@@ -2,6 +2,21 @@ $("#pagetop").click(function () {
   $("html, body").animate({scrollTop: 0}, 1000);
 });
 
+// BEGIN: onscroll top
+$(window).scroll(function(){
+  var _nav = $('nav').offsetTop;
+    if ($(window).scrollTop() >= 110) {
+      $('nav').addClass('fixed-nav');
+    }
+    else {
+      $('nav').removeClass('fixed-nav');
+    }
+
+
+});
+
+// END: onscroll top
+
 // BEGIN: SLIDER
 $(document).ready(function () {
   
@@ -273,7 +288,6 @@ function heightLine() {
   setInterval(checkBoxSize, 1000);
   window.onresize = changeBoxSize;
 }
-
 function addEvent(elm, listener, fn) {
   try {
     elm.addEventListener(listener, fn, false);
@@ -283,6 +297,7 @@ function addEvent(elm, listener, fn) {
 }
 addEvent(window, "load", heightLine);
 // END: heightLine
+
 // BEGIN: on_off image
 var $onOff = $('.on_off'),
   $noChange = "none";
