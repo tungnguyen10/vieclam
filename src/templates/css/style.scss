@@ -35,6 +35,7 @@ $box-shadow: 0px 0px 8px 1px #cecece;
   font-weight: bold;
   text-transform: uppercase;
   position: relative;
+  line-height: 1.3;
 }
 
 .title-work {
@@ -43,6 +44,7 @@ $box-shadow: 0px 0px 8px 1px #cecece;
   background: $bg_title;
   padding: 12px 0;
   font-weight: 500;
+  line-height: 1.3;
   color: #ffffff;
 }
 
@@ -1268,12 +1270,14 @@ footer {
     h2 {
       font-weight: 500;
       padding-bottom: 10px;
+      
     }
     h3 {
       font-size: 22px;
       font-weight: 300;
       padding-bottom: 10px;
       font-family: "Oswald", sans-serif;
+      line-height: 1.3;
     }
     .job-salary {
       @extend .flex;
@@ -1837,6 +1841,23 @@ footer {
       }
     }
   }
+  // Page List job
+
+.list-jobs {
+  padding: 0;
+  position: relative;
+  
+  .box-jobs {
+    h2 {
+      padding-bottom: 5%;
+    }
+    .list-job {
+      .advanced-job {
+        width: 100%;
+      }
+    }
+  }
+}
 }
 
 @media only screen and (max-width: 480px) {
