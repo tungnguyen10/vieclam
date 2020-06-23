@@ -16,7 +16,7 @@ $box-shadow: 0px 0px 8px 1px #cecece;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; 
+  width: 100%;
   z-index: 9999;
 }
 .flex {
@@ -47,7 +47,21 @@ $box-shadow: 0px 0px 8px 1px #cecece;
   line-height: 1.3;
   color: #ffffff;
 }
-
+.btn-edit{
+  margin-top: 10px;
+  border: 1px solid #f2b400;
+    display: inline-block;
+    padding: 5px 15px;
+    color: #fff;
+    transition: all 0.6s ease-out;
+    background: linear-gradient(to right, #c02739 50%, #f2b400 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    &:hover{
+      transition: all 0.5s ease-out;
+    background-position: left bottom;
+    }
+}
 header {
   position: relative;
   padding: 5px 0;
@@ -87,7 +101,7 @@ header {
 
     .login-register {
       position: absolute;
-      bottom: 0;
+      top: 0;
       opacity: 0;
       z-index: 99;
       visibility: hidden;
@@ -121,7 +135,7 @@ header {
 
     &:hover {
       .login-register {
-        bottom: -65px;
+        top: 75px;
         opacity: 1;
         visibility: visible;
       }
@@ -1160,7 +1174,7 @@ footer {
 .list-jobs {
   padding: 0;
   position: relative;
-  
+
   .box-jobs {
     h2 {
       padding-bottom: 30px;
@@ -1194,6 +1208,7 @@ footer {
   }
 }
 .filter {
+  padding-bottom: 60px;
   button.btn-clear-filters {
     color: #333;
     background-color: $color;
@@ -1270,7 +1285,6 @@ footer {
     h2 {
       font-weight: 500;
       padding-bottom: 10px;
-      
     }
     h3 {
       font-size: 22px;
@@ -1380,6 +1394,214 @@ footer {
   }
 }
 
+// Page List personal
+.list-personals {
+  .box-staffs {
+    h2 {
+      padding-bottom: 30px;
+    }
+    .list-staff {
+      .staff {
+        box-shadow: $box-shadow;
+        @extend .flex;
+        padding: 10px;
+        transition: all 0.5s ease;
+        align-items: center;
+        cursor: pointer;
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+        &-photo {
+          width: 17%;
+          img {
+            object-fit: cover;
+            width: 100%;
+          }
+        }
+        &-content {
+          padding: 0 1.5%;
+          width: calc(100% - 20%);
+          h3 {
+            font-weight: 500;
+            font-size: 18px;
+            transition: all 0.5s ease;
+          }
+          .content-major {
+            color: $color666;
+          }
+          .des {
+            line-height: 1.5;
+            padding: 4px 0.5rem;
+          }
+          .content-salary {
+          }
+        }
+        &:hover {
+          .staff-content {
+            h3 {
+              a {
+                color: $color_title;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Page detail personal
+.detail-personal {
+  .box-detail {
+    color: #333333;
+    box-shadow: $box-shadow;
+    padding: 40px 20px;
+    h2 {
+      font-weight: 500;
+      padding-bottom: 10px;
+    }
+    h3 {
+      font-size: 22px;
+      font-weight: 300;
+      padding-bottom: 10px;
+      font-family: "Oswald", sans-serif;
+      line-height: 1.3;
+    }
+    .personal-salary {
+      @extend .flex;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+      > li {
+        &:not(:last-child) {
+          margin-right: 0.6rem;
+        }
+        i {
+          color: $color;
+          font-size: 14px;
+          margin-right: 5px;
+        }
+
+        font-size: 12px;
+        color: #333333;
+      }
+    }
+    .personal_description {
+      .personal_reason,
+      .personal_des,
+      .personal_experience,
+      .personal_skills
+      .apply_personal {
+        margin-bottom: 30px;
+        ul,
+        p {
+          padding: 0 20px;
+          line-height: 1.5;
+        }
+        ul {
+          li {
+            list-style: inside;
+            line-height: 1.5;
+          }
+        }
+      }
+      
+    }
+  }
+  .inside-personal {
+    background: $bgborder;
+    box-shadow: $box-shadow;
+    padding: 10px;
+    margin-bottom: 45px;
+    h3 {
+      font-size: 22px;
+      font-weight: 300;
+      padding-bottom: 20px;
+      font-family: "Oswald", sans-serif;
+      line-height: 1.3;
+      text-align: center;
+      padding-top: 30px;
+    }
+    .personal-company {
+      text-align: center;
+      padding: 0;
+    }
+   
+    .btn_register{
+      padding: 0;
+      width: 100%;
+      text-align: center;
+    }
+    .btn-return{
+      padding: 20px 0 30px;
+      text-align: center;
+    }
+    
+  }
+  .staff-group{
+    margin-top: 20px;
+  }
+
+}
+
+// page employer
+.employer{
+  
+  .box-employer{
+    background: $bgborder;
+    width: 100%;
+    padding: 40px 30px 20px;
+    h2{
+      padding-bottom: 15px;
+      font-size: 20px;
+    }
+    table, th, td{
+      border: 1px solid #a7a7a7;
+      border-collapse: collapse;
+      padding: 5px;
+    }
+    table{
+      width: 100%;
+      background: #fff;
+      margin-bottom: 30px;
+      tr{
+        td{
+          &:first-child{
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .list-items{
+      span{
+        font-weight: 550;
+      }
+    }
+    .employer-info{
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0px 0px 8px 1px #e2e2e2;
+      margin-bottom: 40px;
+    }
+  }
+  .typical-staff{
+    margin: 0 0 70px;
+    h2{
+      margin-top: 45px;
+    }
+    .staff-group{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      box-shadow: none;
+      margin-top: 15px;
+      .staff{
+        width: 31%;
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 768px) {
 }
 
@@ -1471,6 +1693,7 @@ footer {
   }
 }
 @media only screen and (max-width: 768px) {
+
   .good-work .advanced {
     margin: 0 -15px;
   }
@@ -1526,7 +1749,47 @@ footer {
       top: initial;
     }
   }
+// page employer
+.employer{
+  
+  .box-employer{
+    padding: 8% 3% 3%;
+    h2{
+      padding-bottom: 3%;
+    }
+    .tabel{
+      overflow-y: scroll;
+    }
+    table{
+      width: 750px;
+      background: #fff;
+      margin-bottom: 8%;
+      
+    }
 
+    .list-items{
+      span{
+        font-weight: 550;
+      }
+    }
+    .employer-info{
+      padding: 5% 3%;
+      margin-bottom: 8%;
+    }
+  }
+  .typical-staff{
+    margin: 0 0 15%;
+    h2{
+      margin-top: 10%;
+    }
+    .staff-group{
+      margin-top: 3%;
+      .staff{
+        width: 100%;
+      }
+    }
+  }
+}
   .slider {
     .slider-banner {
       img {
@@ -1843,21 +2106,41 @@ footer {
   }
   // Page List job
 
-.list-jobs {
-  padding: 0;
-  position: relative;
-  
-  .box-jobs {
-    h2 {
-      padding-bottom: 5%;
-    }
-    .list-job {
-      .advanced-job {
-        width: 100%;
+  .list-jobs {
+    padding: 0;
+    position: relative;
+
+    .box-jobs {
+      h2 {
+        padding-bottom: 5%;
+      }
+      .list-job {
+        .advanced-job {
+          width: 100%;
+        }
       }
     }
   }
-}
+  .box-jobs_new {
+    .advanced-job {
+      .job-image {
+        width: 29%;
+      }
+    }
+  }
+  // Page List personal
+  .list-personals {
+    .box-staffs {
+
+      .list-staff {
+        .staff {
+          .staff-photo {
+            width: 30%;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 480px) {

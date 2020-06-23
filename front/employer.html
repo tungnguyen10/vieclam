@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <meta name="description" content="DESCRIPTION">
+    <meta name="keywords" content="KEYWORDS">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="./templates/css/bootstrap-grid.css" rel="stylesheet">
+    <link href="./templates/css/slick.css" rel="stylesheet">
+    <link href="./templates/css/slick-theme.css" rel="stylesheet">
+    <link href="./templates/css/style.css" rel="stylesheet">
+  </head>
+</html>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-xl-3 hidden-xs">
+          <dl class="login">
+            <dt><i class="fas fa-user"></i></dt>
+            <dd class="login-info">Cty Toad Travel<span>Chức năng <em class="fas fa-caret-down"></em></span></dd>
+            <dd class="login-register">
+              <ul class="cpmpany_menu">
+                <li><a href="#">Quản lý tài khoản</a></li>
+                <li><a href="#">Đăng tuyển</a></li>
+                <li><a href="#">Ứng viên nộp hồ sơ</a></li>
+                <li><a href="#">Đề nghị tuyển dụng</a></li>
+                <li><a href="#">Thông tin doanh nghiệp</a></li>
+                <li><a href="#">Thay đổi mật khẩu</a></li>
+                <li><a href="#">Đăng xuất</a></li>
+              </ul>
+            </dd>
+          </dl>
+        </div>
+        <div class="col-md-4 col-xl-6">
+          <h1><a href="./"><img src="./templates/img/logo.png" alt="nthc"></a></h1>
+        </div>
+        <div class="col-md-4 col-xl-3 hidden-xs">
+          <div class="contact">
+            <dl class="hotline">
+              <dt><i class="fas fa-mobile-alt"></i></dt>
+              <dd>Hotline<span>(028)389 44 109</span></dd>
+            </dl>
+            <select id="language" name="language">
+              <option value="Vietnam">Vietnam</option>
+              <option value="English">English</option>
+              <option value="China">China</option>
+              <option value="Japan">Japan</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <nav>
+    <div class="container">
+      <div class="menu-mobile hidden-md hidden-lg hidden-sm"> 
+        <div class="hamburger hamburger--vortex-r">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </div>
+        <dl class="login-mobile">
+          <dt><i class="fas fa-user"></i></dt>
+          <dd class="login-info"><a href="login.html" title="Đăng nhập">Đăng nhập / </a><a href="register.html" title="Đăng ký">Đăng ký</a></dd>
+        </dl>
+      </div>
+      <div class="menu_toggle" id="menu_toggle">
+        <ul>
+          <li class="logo-mobile hidden-sm hidden-md hidden-lg"><a href="./"><img src="./templates/img/logo.png" alt="nthc"></a></li>
+          <li class="active"><a href="#">Trang Chủ</a></li>
+          <li><a href="#">Người Tìm Việc</a></li>
+          <li><a href="#">Nhà Tuyển Dụng</a></li>
+          <li><a href="#">Chính Sách</a></li>
+          <li><a href="#">Tin Tức - Sự Kiện</a></li>
+          <li><a href="contact.html">Liên Hệ</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section class="bread-crumb">
+    <div class="container">
+      <div class="row">
+        <ul class="breadcrumb">
+          <li class="home"><a href="/"><span>Trang chủ</span></a><span class="mr_lr"> / </span></li>
+          <li><strong><span>Nhà tuyển dụng</span></strong></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="employer">
+    <div class="container"> 
+      <div class="row">
+        <div class="col-12">
+          <div class="box-employer">
+            <h2 class="title">Thông Tin tài khoản</h2>
+            <div class="employer-info"> 
+              <p class="list-items"><span>Email: </span>laotama10.se@gmail.com</p>
+              <p class="list-items"><span>Mật khẩu: </span>********</p>
+              <div class="btn-edit"><a href="#"><i class="fas fa-pen"></i><span> Chỉnh sửa</span></a></div>
+            </div>
+            <h2 class="title">Danh sách thông tin</h2>
+            <div class="tabel">
+              <table>
+                <tbody>
+                  <tr>
+                    <th width="5%">TT</th>
+                    <th width="15%">Tiêu đề</th>
+                    <th width="15%">Ngày tạo</th>
+                    <th width="10%">Hạn nộp</th>
+                    <th width="10%">Trạng thái</th>
+                    <th width="15%">Kiểm duyệt</th>
+                    <th width="15%">Hành động</th>
+                    <th width="15%">Tổng số ứng viên</th>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Smith</td>
+                    <td>50</td>
+                    <td>Jill</td>
+                    <td>Smith</td>
+                    <td>50</td>
+                    <td>Jill</td>
+                    <td>Smith</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Jackson</td>
+                    <td>94</td>
+                    <td>Eve</td>
+                    <td>Jackson</td>
+                    <td>94</td>
+                    <td>Eve</td>
+                    <td>Eve</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Doe</td>
+                    <td>80</td>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>80</td>
+                    <td>John</td>
+                    <td>John</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h2 class="title">Thông tin doanh nghiệp</h2>
+            <div class="employer-info">
+              <p class="list-items"><span>Tên công ty: </span>Senior Back End Developer</p>
+              <p class="list-items"><span>Quy mô nhân sự: </span>20 - 150 người</p>
+              <p class="list-items"><span>Lĩnh vực hoạt động: </span>Nông nghiệp và hoạt động dịch vụ có liên quan, Khai thác, nuôi trồng thủy sản</p>
+              <p class="list-items"><span>Địa chỉ công ty: </span>Chưa cập nhật</p>
+              <p class="list-items"><span>Tỉnh/thành phố: </span>TP.HCM</p>
+              <p class="list-items"><span>Điện thoại cố định: </span>Chưa cập nhật</p>
+              <p class="list-items"><span>Website: </span>Chưa cập nhật</p>
+              <p class="list-items"><span>Giới thiệu về công ty: </span>Chưa cập nhật</p>
+              <div class="btn-edit"><a href="#"><i class="fas fa-pen"></i><span> Chỉnh sửa</span></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="typical-staff">
+            <h2 class="title">ứng viên tiêu biểu</h2>
+            <div class="staff-group">
+              <div class="staff">
+                <div class="staff-photo"><a href="#"><img src="./templates/img/staff.png" alt="staff"></a></div>
+                <div class="staff-content">
+                  <h3>Nguyễn Thanh Tùng</h3>
+                  <dl>
+                    <dt class="staff-major">Kế toán - Kiểm toán</dt>
+                    <dd class="staff-salary">Lương: 13.500.000 đ  - TP.HCM</dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="staff">
+                <div class="staff-photo"><a href="#"><img src="./templates/img/staff.png" alt="staff"></a></div>
+                <div class="staff-content">
+                  <h3>Nguyễn Thanh Tùng</h3>
+                  <dl>
+                    <dt class="staff-major">Kế toán - Kiểm toán</dt>
+                    <dd class="staff-salary">Lương: 13.500.000 đ  - TP.HCM</dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="staff">
+                <div class="staff-photo"><a href="#"><img src="./templates/img/staff.png" alt="staff"></a></div>
+                <div class="staff-content">
+                  <h3>Nguyễn Thanh Tùng</h3>
+                  <dl>
+                    <dt class="staff-major">Kế toán - Kiểm toán</dt>
+                    <dd class="staff-salary">Lương: 13.500.000 đ  - TP.HCM</dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="staff">
+                <div class="staff-photo"><a href="#"><img src="./templates/img/staff.png" alt="staff"></a></div>
+                <div class="staff-content">
+                  <h3>Nguyễn Thanh Tùng</h3>
+                  <dl>
+                    <dt class="staff-major">Kế toán - Kiểm toán</dt>
+                    <dd class="staff-salary">Lương: 13.500.000 đ  - TP.HCM</dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="staff">
+                <div class="staff-photo"><a href="#"><img src="./templates/img/staff.png" alt="staff"></a></div>
+                <div class="staff-content">
+                  <h3>Nguyễn Thanh Tùng</h3>
+                  <dl>
+                    <dt class="staff-major">Kế toán - Kiểm toán</dt>
+                    <dd class="staff-salary">Lương: 13.500.000 đ  - TP.HCM</dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="staff">
+                <div class="staff-photo"><a href="#"><img src="./templates/img/staff.png" alt="staff"></a></div>
+                <div class="staff-content">
+                  <h3>Nguyễn Thanh Tùng</h3>
+                  <dl>
+                    <dt class="staff-major">Kế toán - Kiểm toán</dt>
+                    <dd class="staff-salary">Lương: 13.500.000 đ  - TP.HCM</dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="staff">
+                <div class="staff-photo"><a href="#"><img src="./templates/img/staff.png" alt="staff"></a></div>
+                <div class="staff-content">
+                  <h3>Nguyễn Thanh Tùng</h3>
+                  <dl>
+                    <dt class="staff-major">Kế toán - Kiểm toán</dt>
+                    <dd class="staff-salary">Lương: 13.500.000 đ  - TP.HCM</dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="staff">
+                <div class="staff-photo"><a href="#"><img src="./templates/img/staff.png" alt="staff"></a></div>
+                <div class="staff-content">
+                  <h3>Nguyễn Thanh Tùng</h3>
+                  <dl>
+                    <dt class="staff-major">Kế toán - Kiểm toán</dt>
+                    <dd class="staff-salary">Lương: 13.500.000 đ  - TP.HCM</dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="staff">
+                <div class="staff-photo"><a href="#"><img src="./templates/img/staff.png" alt="staff"></a></div>
+                <div class="staff-content">
+                  <h3>Nguyễn Thanh Tùng</h3>
+                  <dl>
+                    <dt class="staff-major">Kế toán - Kiểm toán</dt>
+                    <dd class="staff-salary">Lương: 13.500.000 đ  - TP.HCM</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <div class="infomation">
+            <h2>Thông Tin Liên Hệ</h2>
+            <ul class="contact"> 
+              <li class="f_address">1005/5 Nguyễn Kiệm, Phường 3, Quận Gò Vấp, TP. Hồ Chí Minh</li>
+              <li class="f_tel"><a href="tel:02838944109">(028) 389 44 109</a></li>
+              <li class="f_mail"><a href="mailto:tuyendung@gmail.com">tuyendung@gmail.com</a></li>
+            </ul>
+            <ul class="social">
+              <li class="fb"><a href="#"></a></li>
+              <li class="tw"><a href="#"></a></li>
+              <li class="yt"><a href="#"></a></li>
+              <li class="gg"><a href="#"></a></li>
+              <li class="zalo"><a href="#"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="sales-policy">
+            <h2>chính sách bán hàng</h2>
+            <ul>
+              <li><a href="#"><i class="fas fa-angle-right"></i>Hướng dẫn mua hàng</a></li>
+              <li><a href="#"><i class="fas fa-angle-right"></i>Hình thức thanh toán</a></li>
+              <li><a href="#"><i class="fas fa-angle-right"> </i>Tài khoản và Đơn hàng</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="statistics">
+            <h2>thống kê truy cập</h2>
+            <dl>
+              <dt><i class="fas fa-user"></i>Số lượng truy cập :</dt>
+              <dd>123456</dd>
+            </dl>
+            <dl>
+              <dt><i class="fas fa-users"></i>Đang online :</dt>
+              <dd>12</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+    <address>
+      <div class="container">
+        <div class="row">
+          <div class="cpr"><span>&copy; Copyright NTHC 2020. </span><span> Designed by </span><a href="http://laotama.com/" target="_blank">Thanh Tung</a></div>
+        </div>
+      </div>
+    </address>
+  </footer>
+  <div class="hot-linkly hidden-xs">
+    <div class="bic-load">
+      <div class="bic-load-tem"><a class="loptop hotline" href="tel:02838944109"><i class="fas fa-mobile-alt"></i><span>Hotline</span></a></div>
+      <div class="bic-load-tem"><a class="loptop fanpage" target="_blank" href="/"><i class="fab fa-facebook"></i><span>Fanpage</span></a></div>
+      <div class="bic-load-tem"><a class="loptop youtube" target="_blank" href="/"><i class="fab fa-youtube"></i><span>Kênh Youtube</span></a></div>
+      <div class="bic-load-tem"><a class="loptop twitter" target="_blank" href="/"><i class="fab fa-twitter"></i><span>Kênh twitter</span></a></div>
+      <div class="bic-load-tem"><a class="loptop" id="pagetop"><i class="fas fa-home"></i><span>Đầu Trang</span></a></div>
+    </div>
+  </div>
+  <ul class="lag-mobile hidden-sm hidden-md hidden-lg">
+    <li><img src="templates/img/vn.jpg" alt="Viet Nam"></li>
+    <li><img src="templates/img/en.jpg" alt="Enghlish"></li>
+  </ul>
+  <script src="./templates/js/jquery.js"></script>
+  <script src="./templates/js/slick.min.js"></script>
+  <script src="./templates/js/default.js"></script>
+</body>

@@ -1,0 +1,125 @@
+doctype html
+html(lang="vi")
+  head
+    title #{TITLE}
+    meta(charset="utf-8")
+    link(rel='icon' type='image/png' href='img/favicon.png')
+
+    meta(name="description" content="DESCRIPTION")
+    meta(name="keywords" content="KEYWORDS")
+    meta(name="format-detection" content="telephone=no")
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+
+    link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous')
+    link(href="./templates/css/bootstrap-grid.css" rel="stylesheet")
+    link(href="./templates/css/slick.css" rel="stylesheet")
+    link(href="./templates/css/slick-theme.css" rel="stylesheet")
+    link(href="./templates/css/style.css" rel="stylesheet")
+
+body
+  //- header
+  block header
+    include ./elements/_header.pug
+
+  section.bread-crumb
+    .container
+      .row
+        ul.breadcrumb
+          li.home
+            a(href='/')
+              span Trang chủ 
+            span.mr_lr  / 
+          li
+            a(href='/')
+              span Danh sách ứng viên
+            span.mr_lr  / 
+          li
+            strong
+              span Chi tiết ứng viên
+
+  section.detail-personal
+    .container 
+      .row
+        .col-lg-9.col-sm-12
+          .box-detail
+            h2.title Chuyên viên tư vấn BĐS
+
+            .personal_description
+              .personal_reason
+                h3 Thông tin cá nhân
+                p - Họ tên : Trần Minh Kha
+                  br
+                  |- Ngày sinh : 05-12-1995
+                  br
+                  |- Giới tính : Nam
+                  br
+                  |- Địa chỉ : 34 nguyễn du gò vấp TP hcm
+              .personal_des
+                h3 Quá trình học tập
+                p - Hệ đào tạo : Đại học
+                  br
+                  |- Chuyên ngành : Nhiệt - Lạnh
+                  br
+                  |- Tốt nghiệp : Đã tốt nghiệp
+                  br
+                  |- Chứng chỉ anh văn : Toeic trên 350
+                  br
+                  |- Chứng chỉ tin học : A
+                  br
+                  |- Chứng chỉ khác : Đồ hoạ
+                  br
+                  |- Thời gian làm việc : Toàn thời gian
+                  br
+                  |- Mức lương : Thoả thuận
+
+
+              .personal_experience
+                h3 Mục tiêu nghề nghiệp
+                p - Mong muốn được làm việc trong một môi trường chuyên nghiệp.
+                  br
+                  |- Công việc phù hợp và ổn định
+                  br
+                  |- Mong muốn tìm được nơi có cơ hội cống hiến bản thân tốt
+                  br
+                  |- Rèn luyện kỹ năng bản thân tốt hơn
+                  br
+                  |- Mong muốn tìm được chỗ làm có mức lương tốt
+              .personal_skills
+                h3 Kỹ năng bản thân
+                p - Chăm chỉ, nhanh nhẹn, nhiệt tình, trách nhiệm
+                  br
+                  |- Kỹ năng giao tiếp linh hoạt, có khả năng thuyết trình và trình bày
+                  br
+                  |- Có khả năng thích nghi nhanh với môi trường làm việc
+                  br
+                  |- Kỹ năng lên kế hoạch, tổ chức sắp xếp công việc.
+                  br
+                  |- Chịu được áp lực cao trong công việc
+              
+
+          //- jobnews
+          block jobnews
+            include ./elements/_jobnew.pug
+
+        .col-md-3.hidden-sm.hidden-xs
+          .inside-personal
+            .logo-personal
+              a(href='#')
+                img(alt='chuyen vien tu van bds' src='./templates/img/staff1.png')
+            .apply_personal
+              .portlet-title
+                h3 Gửi đề nghị cho ứng viên
+              .btn_register: a(href='#') Đăng nhập để Tuyển dụng
+              p.btn-return: a(href='')
+                  i.fa.fa-fw.fa-reply
+                  | Quay lại trang danh sách
+
+          block staff
+            include ./elements/_staff.pug
+  //- footer
+  block footer
+    include ./elements/_footer.pug
+
+  script(src="./templates/js/jquery.js")
+  script(src="./templates/js/slick.min.js")
+  script(src="./templates/js/default.js")
