@@ -874,12 +874,12 @@ body
           .circle-mission
             dl
               dt.chatluong: img(src="./templates/img/chatluong_off.png", alt="chất lượng").id-chatluong
-              dt.reputation: img(src="./templates/img/uytin_off.png", alt="uy tín").id-uytin
-              dt.value: img(src="./templates/img/giatri_off.png", alt="Giá trị").id-giatri
+              dt.uytin.active: img(src="./templates/img/uytin_on.png", alt="uy tín").id-uytin
+              dt.giatri: img(src="./templates/img/giatri_off.png", alt="Giá trị").id-giatri
             ul
-              li.tab-link(rel="id-uytin"): span
-              li.tab-link(rel="id-chatluong"): span
-              li.tab-link(rel="id-giatri"): span
+              li.tab-link.active(rel="id-uytin" data-tabs="uytin"): span
+              li.tab-link(rel="id-chatluong" data-tabs="chatluong"): span
+              li.tab-link(rel="id-giatri" data-tabs="giatri"): span
           .mission-tabs
             #tab-1.tab-content.content-info.id-uytin
               h4 Uy Tín

@@ -10,6 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link href="./templates/css/bootstrap-grid.css" rel="stylesheet">
+    <link href="./templates/css/slick.css" rel="stylesheet">
+    <link href="./templates/css/slick-theme.css" rel="stylesheet">
     <link href="./templates/css/style.css" rel="stylesheet">
   </head>
 </html>
@@ -20,11 +22,12 @@
         <div class="col-md-4 col-xl-3 hidden-xs">
           <dl class="login">
             <dt><i class="fas fa-user"></i></dt>
-            <dd class="login-info">Tài khoản<span>Đăng ký / Đăng nhập</span></dd>
+            <dd class="login-info">Nguyễn Thanh Tùng<span>Chức năng <em class="fas fa-caret-down"></em></span></dd>
             <dd class="login-register">
               <ul>
-                <li><a href="login.html" title="Đăng nhập">Đăng nhập</a></li>
-                <li><a href="register.html" title="Đăng ký">Đăng ký</a></li>
+                <li><a rel="nofollow" href="/taikhoan/profile">Quản lý tài khoản</a></li>
+                <li><a rel="nofollow" href="">Quản lý hồ sơ</a></li>
+                <li><a href="#">Tạo hồ sơ</a></li>
               </ul>
             </dd>
           </dl>
@@ -80,48 +83,113 @@
       <div class="row">
         <ul class="breadcrumb">
           <li class="home"><a href="/"><span>Trang chủ</span></a><span class="mr_lr"> / </span></li>
-          <li><strong><span>Liên hệ</span></strong></li>
+          <li><strong><span>Nhà tuyển dụng</span></strong></li>
         </ul>
       </div>
     </div>
   </section>
-  <section class="content" id="contact">
-    <div class="container">
+  <section class="employer">
+    <div class="container"> 
       <div class="row">
-        <h2 class="title">Liên hệ với chúng tôi</h2>
-      </div>
-      <div class="pagelogin">
-        <form id="contact" accept-charset="utf-8" action="/contact" method="post">
-          <div class="row">
-            <fieldset class="col-lg-6 col-md-12 col-sm-12 col-xs-12 form-group">
-              <label>Họ và tên </label>
-              <input class="form-control form-control-lg" placeholder="Họ và tên" type="text" required="" value="" name="contact[Name]">
-            </fieldset>
-            <fieldset class="col-lg-6 col-md-12 col-sm-12 col-xs-12 form-group">
-              <label>Số điện thoại </label>
-              <input class="form-control form-control-lg" placeholder="Số điện thoại" type="text" required="" pattern="d+" name="contact[Phone]" value="">
-            </fieldset>
-            <fieldset class="col-lg-6 col-md-12 col-sm-12 col-xs-12 form-group">
-              <label>Email </label>
-              <input class="form-control form-control-lg" id="email1" placeholder="Email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$" required="" value="" name="contact[email]">
-            </fieldset>
-            <fieldset class="col-lg-6 col-md-12 col-sm-12 col-xs-12 form-group">
-              <label>Địa chỉ </label>
-              <input class="form-control form-control-lg" placeholder="Địa chỉ" type="text" required="" name="contact[Address1]" value="">
-            </fieldset>
-            <fieldset class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group">
-              <label>Nội dung </label>
-              <textarea class="form-control" id="comment" placeholder="Nội dung" name="contact[body]" rows="5" required=""></textarea>
-            </fieldset>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <button class="btn_register" type="submit">Gửi tin nhắn</button>
+        <div class="col-12">
+          <div class="box-employer">
+            <h2 class="title">Thông Tin tài khoản</h2>
+            <div class="employer-info"> 
+              <p class="list-items"><span>Email: </span>laotama10.se@gmail.com</p>
+              <p class="list-items"><span>Mật khẩu: </span>********</p>
+              <div class="btn-edit"><a href="#"><i class="fas fa-pen"></i><span> Chỉnh sửa</span></a></div>
+            </div>
+            <h2 class="title">Thông tin ứng viên</h2>
+            <div class="employer-info">
+              <p class="list-items"><span>Tên công ty: </span>Senior Back End Developer</p>
+              <p class="list-items"><span>Quy mô nhân sự: </span>20 - 150 người</p>
+              <p class="list-items"><span>Lĩnh vực hoạt động: </span>Nông nghiệp và hoạt động dịch vụ có liên quan, Khai thác, nuôi trồng thủy sản</p>
+              <p class="list-items"><span>Địa chỉ công ty: </span>Chưa cập nhật</p>
+              <p class="list-items"><span>Tỉnh/thành phố: </span>TP.HCM</p>
+              <p class="list-items"><span>Điện thoại cố định: </span>Chưa cập nhật</p>
+              <p class="list-items"><span>Website: </span>Chưa cập nhật</p>
+              <p class="list-items"><span>Giới thiệu về công ty: </span>Chưa cập nhật</p>
+              <div class="btn-edit"><a href="#"><i class="fas fa-pen"></i><span> Chỉnh sửa</span></a></div>
             </div>
           </div>
-        </form>
+        </div>
+        <div class="col-12">
+          <div class="box-jobs_new">
+            <h2 class="title">việc làm mới</h2>
+            <div class="list-jobs_new">
+              <div class="advanced-job">
+                <div class="job-image"><a href="#"><img src="./templates/img/techcom.png" alt="logo job"></a></div>
+                <div class="job-content">
+                  <h3><a href="#">Nhân Viên Thu Mua</a></h3>
+                  <div class="name-company">CÔNG TY BẤT ĐỘNG SẢN SMARTLAND</div>
+                  <ul class="job-salary">
+                    <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                    <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                    <li><i class="far fa-clock"></i>02-03-2020</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="advanced-job">
+                <div class="job-image"><a href="#"><img src="./templates/img/techcom.png" alt="logo job"></a></div>
+                <div class="job-content">
+                  <h3><a href="#">Nhân Viên Thu Mua</a></h3>
+                  <div class="name-company">CÔNG TY BẤT ĐỘNG SẢN SMARTLAND</div>
+                  <ul class="job-salary">
+                    <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                    <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                    <li><i class="far fa-clock"></i>02-03-2020     </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="advanced-job">
+                <div class="job-image"><a href="#"><img src="./templates/img/techcom.png" alt="logo job"></a></div>
+                <div class="job-content">
+                  <h3><a href="#">Nhân Viên Thu Mua</a></h3>
+                  <div class="name-company">CÔNG TY BẤT ĐỘNG SẢN SMARTLAND</div>
+                  <ul class="job-salary">
+                    <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                    <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                    <li><i class="far fa-clock"></i>02-03-2020         </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="advanced-job">
+                <div class="job-image"><a href="#"><img src="./templates/img/techcom.png" alt="logo job"></a></div>
+                <div class="job-content">
+                  <h3><a href="#">Nhân Viên Thu Mua</a></h3>
+                  <div class="name-company">CÔNG TY BẤT ĐỘNG SẢN SMARTLAND</div>
+                  <ul class="job-salary">
+                    <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                    <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                    <li><i class="far fa-clock"></i>02-03-2020           </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="advanced-job">
+                <div class="job-image"><a href="#"><img src="./templates/img/techcom.png" alt="logo job"></a></div>
+                <div class="job-content">
+                  <h3><a href="#">Nhân Viên Thu Mua</a></h3>
+                  <div class="name-company">CÔNG TY BẤT ĐỘNG SẢN SMARTLAND</div>
+                  <ul class="job-salary">
+                    <li><i class="fas fa-dollar-sign"></i>15-20 triệu</li>
+                    <li><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh</li>
+                    <li><i class="far fa-clock"></i>02-03-2020</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="google-maps map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d979.6388035882823!2d106.67952227214906!3d10.845310511090728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175298451960a6b%3A0x6beba7ae3a0953dd!2zVsOpIG3DoXkgYmF5IFRoYW5oIFTDuW5n!5e0!3m2!1sen!2s!4v1592500102694!5m2!1sen!2s" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"> </iframe>
+    <div class="user_menu">
+      <div class="btn-open fas fa-bars"></div>
+      <h2>Hồ sơ của bạn</h2>
+      <ul>
+        <li class="active"><a rel="nofollow" href="#"><i class="far fa-user-circle"></i>Quản lý tài khoản</a></li>
+        <li><a rel="nofollow" href=""> <i class="far fa-address-card"></i>Quản lý hồ sơ</a></li>
+        <li><a href="#"> <i class="far fa-paper-plane"></i>Tạo hồ sơ</a></li>
+      </ul>
     </div>
   </section>
   <footer>

@@ -1,0 +1,95 @@
+doctype html
+html(lang="vi")
+  head
+    title #{TITLE}
+    meta(charset="utf-8")
+    link(rel='icon' type='image/png' href='img/favicon.png')
+
+    meta(name="description" content="DESCRIPTION")
+    meta(name="keywords" content="KEYWORDS")
+    meta(name="format-detection" content="telephone=no")
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+
+    link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous')
+    link(href="./templates/css/bootstrap-grid.css" rel="stylesheet")
+    link(href="./templates/css/slick.css" rel="stylesheet")
+    link(href="./templates/css/slick-theme.css" rel="stylesheet")
+    link(href="./templates/css/style.css" rel="stylesheet")
+
+body
+  //- header
+  block header
+    include ./elements/_header_personal.pug
+
+  section.bread-crumb
+    .container
+      .row
+        ul.breadcrumb
+          li.home
+            a(href='/')
+              span Trang chủ
+            span.mr_lr  / 
+          li
+            strong
+              span Nhà tuyển dụng
+
+  section.employer
+    .container 
+      .row
+        .col-12
+          .box-employer
+            h2.title Thông Tin tài khoản
+            .employer-info  
+              p.list-items
+                  span Email: 
+                  | laotama10.se@gmail.com
+              p.list-items
+                  span Mật khẩu: 
+                  | ********
+              .btn-edit
+                a(href='#')
+                  i.fas.fa-pen
+                  span  Chỉnh sửa
+            h2.title Thông tin ứng viên
+            .employer-info
+              p.list-items
+                span Tên công ty: 
+                | Senior Back End Developer
+              p.list-items
+                span Quy mô nhân sự: 
+                | 20 - 150 người
+              p.list-items
+                span Lĩnh vực hoạt động: 
+                |Nông nghiệp và hoạt động dịch vụ có liên quan, Khai thác, nuôi trồng thủy sản
+              p.list-items
+                span Địa chỉ công ty: 
+                | Chưa cập nhật
+              p.list-items
+                span Tỉnh/thành phố: 
+                | TP.HCM
+              p.list-items
+                span Điện thoại cố định: 
+                | Chưa cập nhật
+              p.list-items
+                span Website: 
+                | Chưa cập nhật
+              p.list-items
+                span Giới thiệu về công ty: 
+                | Chưa cập nhật
+              .btn-edit
+                a(href='#')
+                  i.fas.fa-pen
+                  span  Chỉnh sửa
+
+        .col-12
+          block jobnews
+            include ./elements/_jobnew.pug
+    block footer
+      include ./elements/_ungvien_login.pug
+  //- footer
+  block footer
+    include ./elements/_footer.pug
+
+  script(src="./templates/js/jquery.js")
+  script(src="./templates/js/slick.min.js")
+  script(src="./templates/js/default.js")
