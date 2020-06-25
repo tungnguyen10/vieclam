@@ -336,8 +336,8 @@ header {
       &:hover,
       &:focus {
         color: #fff;
-        background: url(../img/icon_lag.png) no-repeat 3px 7px, $color_title;
-        border: 1px solid $color_title;
+        background: url(../img/icon_lag_on.png) no-repeat 3px 7px, $color;
+        border: 1px solid $color;
       }
     }
   }
@@ -1335,17 +1335,31 @@ footer {
     }
   }
 }
-.box-jobs_new {
+.box-jobs-new {
   padding-top: 60px;
   padding-bottom: 60px;
   h2 {
     padding-bottom: 30px;
   }
+  .list-jobs-new{
+    @extend .flex-between; flex-wrap: wrap;
+  }
   .advanced-job {
+    width: 50%;
     align-items: end;
     padding: 0.75rem 0;
+    &:last-child{
+      &::before{
+        content: "";
+      border-bottom: 1px dashed #f2f2f2;
+      position: absolute;
+      bottom: 0;
+      left: 1%;
+      right: 3%;
+      width: 90%;
+      }
+    }
     .job-image {
-      width: 15%;
       height: auto;
     }
   }
@@ -2268,8 +2282,9 @@ footer {
       }
     }
   }
-  .box-jobs_new {
+  .box-jobs-new {
     .advanced-job {
+      width: 100%;
       .job-image {
         width: 29%;
       }
