@@ -1,0 +1,234 @@
+doctype html
+html(lang="vi")
+  head
+    title #{TITLE}
+    meta(charset="utf-8")
+    link(rel='icon' type='image/png' href='img/favicon.png')
+
+    meta(name="description" content="DESCRIPTION")
+    meta(name="keywords" content="KEYWORDS")
+    meta(name="format-detection" content="telephone=no")
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+
+    link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous')
+    link(href="./templates/css/bootstrap-grid.css" rel="stylesheet")
+    link(href="./templates/css/slick.css" rel="stylesheet")
+    link(href="./templates/css/slick-theme.css" rel="stylesheet")
+    link(href="./templates/css/style.css" rel="stylesheet")
+
+body
+  //- header
+  block header
+    include ./elements/_header_personal.pug
+
+  section.bread-crumb
+    .container
+      .row
+        ul.breadcrumb
+          li.home
+            a(href='/')
+              span Trang chủ
+            span.mr_lr  / 
+          li
+            strong
+              span Cập nhật thông tin
+
+  section.employee-profile
+    .container 
+      .row
+        .col-12
+          .portlet
+            .portlet-title
+              h2.title Ứng viên đăng tuyển thông tin
+            .portlet-body
+              .form-group.field-userprofile-fullname
+                .form-group
+                  label.control-label(for='email')
+                    | Email 
+                    span.redColor *
+                  input#email.form-control(type='email', value='', name='email', placeholder='Cho nhà tuyển dụng liên hệ với bạn...', required='required')
+                  p.help-block.help-block-error
+                .form-group
+                  label.control-label(for='password')
+                    | Password 
+                    span.redColor *
+                  input#password.form-control(type='password', name='password', required='required', aria-autocomplete='list')
+                  p.help-block.help-block-error
+                .form-group
+                  label.control-label(for='hoten')
+                    | Họ tên 
+                    span.redColor *
+                  input#hoten.form-control(type='text', name='hoten', required='required', value='')
+                  p.help-block.help-block-error
+              .form-group.field-userprofile-date_of_birth_dmy
+                .form-group
+                  label.control-label(for='ngaysinh')
+                    | Ngày sinh 
+                    span.redColor *
+                  input#ngaysinh.form-control(type='text', name='ngaysinh', required='required', value='', placeholder='dd-mm-yyyy', data-mask='')
+                  p.help-block.help-block-error
+              .form-group.field-userprofile-gender
+                .form-group
+                  label.control-label(for='gioitinh')
+                    | Giới tính 
+                    span.redColor *
+                  select#gioitinh.form-control(name='gioitinh', required='required')
+                    option(value='') -Chọn-
+                    option(value='1') Nam
+                    option(value='0') Nữ
+              .form-group.field-userprofile-address
+                .form-group
+                  label.control-label(for='diachi')
+                    | Địa chỉ 
+                    span.redColor *
+                  input#diachi.form-control(type='text', name='diachi', value='', required='required', placeholder='Vd: 12 Nguyễn Văn Bảo, P4, Gò Vấp, TP.HCM')
+              .form-group.field-userprofile-phone_number
+                .form-group
+                  label.control-label(for='phone')
+                    | Số điện thoại 
+                    span.redColor *
+                  input#dienthoai.form-control(type='number', name='dienthoai', required='required', value='')
+
+          .portlet
+            .portlet-body
+              .form-group.field-userprofile-edu_program_id
+                .form-group
+                  label.control-label(for='id_hedaotao')
+                    | Hệ đào tạo 
+                    span.redColor *
+                  select#id_hedaotao.form-control(name='id_hedaotao', required='required')
+                    option(value='') -Chọn hệ đào tạo-
+                    option(value='2', title='Cao đẳng') Cao đẳng
+                    option(value='3', title='Cao đẳng nghề') Cao đẳng nghề
+                    option(value='1', title='Đại học') Đại học
+              .form-group.field-userprofile-edu_major_id
+                .form-group
+                  label.control-label(for='id_chuyennganh')
+                    | Chuyên ngành 
+                    span.redColor *
+                  select#id_chuyennganh.form-control(name='id_chuyennganh', required='required')
+                    option(value='') -Chọn chuyên ngành-
+                    option(value='18', title='Viện  KHCN & QLMT') Viện  KHCN & QLMT
+                    option(value='3', title='Kế toán - Kiểm toán') Kế toán - Kiểm toán
+                    option(value='17', title='Cơ khí') Cơ khí
+                    option(value='15', title='Luật') Luật
+                    option(value='14', title='Xây dựng') Xây dựng
+                    option(value='13', title='Thương mại du lịch') Thương mại du lịch
+                    option(value='12', title='Tài chính - Ngân hàng') Tài chính - Ngân hàng
+                    option(value='11', title='Ngoại ngữ') Ngoại ngữ
+                    option(value='10', title='Hoá học') Hoá học
+                    option(value='9', title='May - Thời trang') May - Thời trang
+                    option(value='8', title='Nhiệt - Lạnh') Nhiệt - Lạnh
+                    option(value='7', title='Công nghệ Điện tử ') Công nghệ Điện tử 
+                    option(value='6', title='Công nghệ Điện') Công nghệ Điện
+                    option(value='1', title='Công nghệ thông tin') Công nghệ thông tin
+                    option(value='4', title='Công nghệ Động lực') Công nghệ Động lực
+                    option(value='5', title='Công nghệ thực phẩm') Công nghệ thực phẩm
+                    option(value='2', title='Quản trị kinh doanh') Quản trị kinh doanh
+                    option(value='16', title='Khác') Khác
+              .form-group
+                label.control-label(for='is_dhcn')
+                  | Bạn là SV trường ĐH Công nghiệp TP.HCM ? 
+                  span.redColor *
+                select#is_dhcn.form-control(name='is_dhcn', required='required')
+                  option(value='') -Chọn-
+                  option(value='1') Phải
+                  option(value='0') Không phải
+              .form-group.field-userprofile-english_certs
+                .form-group
+                  label.control-label
+                    | Chứng chỉ anh văn 
+                    span.redColor *
+                  #userprofile-english_certs.form-control
+                    label.checkbox-inline
+                      input(type='checkbox', name='id_anhvan[]', value='1')
+                      |  B
+                    label.checkbox-inline
+                      input(type='checkbox', name='id_anhvan[]', value='2')
+                      |  C
+                    label.checkbox-inline
+                      input(type='checkbox', name='id_anhvan[]', value='3')
+                      |  Toeic trên 350
+                    label.checkbox-inline
+                      input(type='checkbox', name='id_anhvan[]', value='4')
+                      |  Toeic trên 450
+                  p.help-block.help-block-error
+              .form-group.field-userprofile-informatics_certs
+                .form-group
+                  label.control-label
+                    | Chứng chỉ tin học 
+                    span.redColor *
+                  input(type='hidden', name='UserProfile[informatics_certs]', value='')
+                  #userprofile-informatics_certs.form-control
+                    label.checkbox-inline
+                      input(type='checkbox', name='id_tinhoc[]', value='4')
+                      |  A
+                    label.checkbox-inline
+                      input(type='checkbox', name='id_tinhoc[]', value='1')
+                      |  B
+                    label.checkbox-inline
+                      input(type='checkbox', name='id_tinhoc[]', value='2')
+                      |  C
+                    label.checkbox-inline
+                      input(type='checkbox', name='id_tinhoc[]', value='3')
+                      |  Đồ hoạ
+                  p.help-block.help-block-error
+              .form-group.field-userprofile-edu_others
+                .form-group
+                  label.control-label(for='chungchikhac') Chứng chỉ khác
+                  input#chungchikhac.form-control(type='text', name='chungchikhac', value='')
+                  p.help-block.help-block-error
+              .form-group.field-userprofile-edu_others
+                .form-group
+                  label.control-label(for='totnghiep')
+                    | Bạn đã tốt nghiệp chưa? 
+                    span.redColor *
+                  #userprofile-informatics_certs.form-control
+                    label.checkbox-inline
+                      input(type='radio', name='datotnghiep', value='1', required='')
+                      |  Đã tốt nghiệp
+                    label.checkbox-inline
+                      input(type='radio', name='datotnghiep', value='0', required='')
+                      |  Chưa tốt nghiệp
+                .form-group
+                  label.control-label(for='congviecmongmuon')
+                    | Công việc mong muốn 
+                    span.redColor *
+                  input#congviecmongmuon.form-control(type='text', value='', name='congviecmongmuon', required='required')
+                .form-group
+                  label.control-label(for='thoigian')
+                    | Thời gian làm việc 
+                    span.redColor *
+                  select#thoigian.form-control(name='thoigian', required='required')
+                    option(value='') -Chọn thời gian làm việc-
+                    option(value='1') Toàn thời gian
+                    option(value='2') Bán thời gian
+
+          .portlet
+            .portlet-body
+              .form-group
+                label(for='userprofile-is_public_profile')
+                  | Hiển thị hồ sơ 
+                  span.redColor *
+                .radio.form-control
+                  .form-group.field-userprofile-is_public_profile
+                    .form-group
+                      #active
+                        label.radio-inline
+                          input(type='radio', name='active', value='1', checked='')
+                          |  Có
+                        label.radio-inline
+                          input(type='radio', name='active', value='0')
+                          |  Không
+              .form-actions
+                button.btn_register(type='submit', name='sbRegisterCandidate') Đăng ký hồ sơ
+
+    block footer
+      include ./elements/_ungvien_login.pug
+  //- footer
+  block footer
+    include ./elements/_footer.pug
+
+  script(src="./templates/js/jquery.js")
+  script(src="./templates/js/slick.min.js")
+  script(src="./templates/js/default.js")
