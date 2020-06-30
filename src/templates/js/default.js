@@ -140,11 +140,6 @@ $(document).ready(function () {
 // BEGIN: TABS
 
 $(document).ready(function () {
-
-  $('.btn-open').click(function (e) { 
-    $('.user_menu, .company_menu').toggleClass('open');
-  });
-
   $('.content-info:first').show();
   $(".circle-mission ul li.tab-link").click(function () {
     var tab_id = $(this).attr("rel");
@@ -155,7 +150,6 @@ $(document).ready(function () {
       $(this).removeClass('active');
       $(this).children('span').css('background', '#ffe037');
     });
-    
     $('.circle-mission dl dt').each(function (element) {
       $(this).removeClass('active');
       $(this).children('img').attr('src',$(this).children('img').attr('src').replace('_on','_off'))

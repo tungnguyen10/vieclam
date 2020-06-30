@@ -1,0 +1,49 @@
+doctype html
+html(lang="vi")
+  head
+    title #{TITLE}
+    meta(charset="utf-8")
+    link(rel='icon' type='image/png' href='img/favicon.png')
+
+    meta(name="description" content="DESCRIPTION")
+    meta(name="keywords" content="KEYWORDS")
+    meta(name="format-detection" content="telephone=no")
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+
+    link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous')
+    link(href="./templates/css/bootstrap-grid.css" rel="stylesheet")
+    link(href="./templates/css/slick.css" rel="stylesheet")
+    link(href="./templates/css/slick-theme.css" rel="stylesheet")
+    link(href="./templates/css/style.css" rel="stylesheet")
+
+body
+  //- header
+  block header
+    include ./elements/_header.pug
+
+  section.bread-crumb
+    .container
+      .row
+        ul.breadcrumb
+          li.home
+            a(href='/')
+              span Trang chủ
+            span.mr_lr  / 
+          li
+            strong
+              span Danh sách tin tức
+
+  section.list-news
+    .container 
+      .row
+        .col-lg-3
+          
+
+
+  //- footer
+  block footer
+    include ./elements/_footer.pug
+
+  script(src="./templates/js/jquery.js")
+  script(src="./templates/js/slick.min.js")
+  script(src="./templates/js/default.js")
