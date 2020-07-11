@@ -182,10 +182,12 @@ ul {
     z-index: 99;
     top: 0;
     right: 0;
-    width: 10%;
+    width: 15%;
     li{
-        margin-bottom: -3px;
         border: 1px solid #fff;
+        width: 50%;
+        float: left;
+
         img{
             object-fit: cover;
         }

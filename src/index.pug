@@ -12,6 +12,7 @@ html(lang="vi")
 
     link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.7.0/css/all.css', integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ', crossorigin='anonymous')
     link(href="./templates/css/bootstrap-grid.css" rel="stylesheet")
+    link(href="./templates/css/animate.css" rel="stylesheet")
     link(href="./templates/css/slick.css" rel="stylesheet")
     link(href="./templates/css/slick-theme.css" rel="stylesheet")
     link(href="./templates/css/style.css" rel="stylesheet")
@@ -29,7 +30,7 @@ body
         img(src='./templates/img/slider.jpg', alt='slider' )
     .container
       .row
-        .search
+        .wow.slideInUp.search
           form#search
             .form-group.fas.fa-search
               input.form-control(type='email', placeholder='Chức danh, kỹ năng, tên công ty')
@@ -111,7 +112,7 @@ body
               p.search-plus: a(href="#")
                 i.fas.fa-search-plus 
                 |Tìm Kiếm Nâng Cao
-        ul.bottom-work
+        ul.wow.slideInUp.bottom-work
           li: a(href="#")
             span: img(src="./templates/img/icon_personal_mobile.png", alt="Việc làm tốt nhất").hidden-md.hidden-lg.hidden-sm
             |Việc làm tốt nhất
@@ -128,7 +129,7 @@ body
         .advanced
           h2.title-work Thông Tin Tuyển Dụng Mới Nhất
           .advanced-work-group.slider-work
-            .advanced-group
+            .wow.slideInLeft.advanced-group
               .advanced-job
                 .job-image
                   a(href="#")
@@ -143,8 +144,8 @@ body
                       i.fas.fa-dollar-sign
                       |15-20 triệu
                     li
-                      i.fas.fa-map-marker-alt
-                      |Hồ Chí Minh
+                      i.fas.fa-hourglass-half
+                      |1 năm
                     li
                       i.far.fa-clock
                       |02-03-2020
@@ -158,7 +159,7 @@ body
                       i.fas.fa-dollar-sign
                       |15-20 triệu
                     li
-                      i.fas.fa-map-marker-alt
+                      i.fas.fa-hourglass-half
                       |Hồ Chí Minh
                     li
                       i.far.fa-clock
@@ -176,12 +177,12 @@ body
                       i.fas.fa-dollar-sign
                       |15-20 triệu
                     li
-                      i.fas.fa-map-marker-alt
+                      i.fas.fa-hourglass-half
                       |Hồ Chí Minh
                     li
                       i.far.fa-clock
                       |02-03-2020
-            .advanced-group
+            .wow.slideInUp.advanced-group
               .advanced-job
                 .job-image: a(href="#"): img(src="./templates/img/job_logo.png", alt="logo job")
                 .job-content
@@ -192,22 +193,7 @@ body
                       i.fas.fa-dollar-sign
                       |15-20 triệu
                     li
-                      i.fas.fa-map-marker-alt
-                      |Hồ Chí Minh
-                    li
-                      i.far.fa-clock
-                      |02-03-2020
-              .advanced-job
-                .job-image: a(href="#"): img(src="./templates/img/job_logo.png", alt="logo job")
-                .job-content
-                  h3: a(href="#") Nhân Viên Thu Mua
-                  .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
-                  ul.job-salary
-                    li
-                      i.fas.fa-dollar-sign
-                      |15-20 triệu
-                    li
-                      i.fas.fa-map-marker-alt
+                      i.fas.fa-hourglass-half
                       |Hồ Chí Minh
                     li
                       i.far.fa-clock
@@ -222,12 +208,27 @@ body
                       i.fas.fa-dollar-sign
                       |15-20 triệu
                     li
-                      i.fas.fa-map-marker-alt
+                      i.fas.fa-hourglass-half
                       |Hồ Chí Minh
                     li
                       i.far.fa-clock
                       |02-03-2020
-            .advanced-group
+              .advanced-job
+                .job-image: a(href="#"): img(src="./templates/img/job_logo.png", alt="logo job")
+                .job-content
+                  h3: a(href="#") Nhân Viên Thu Mua
+                  .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
+                  ul.job-salary
+                    li
+                      i.fas.fa-dollar-sign
+                      |15-20 triệu
+                    li
+                      i.fas.fa-hourglass-half
+                      |Hồ Chí Minh
+                    li
+                      i.far.fa-clock
+                      |02-03-2020
+            .wow.slideInRight.advanced-group
               .advanced-job
                 .job-image
                   a(href="#")
@@ -241,7 +242,7 @@ body
                       i.fas.fa-dollar-sign
                       |15-20 triệu
                     li
-                      i.fas.fa-map-marker-alt
+                      i.fas.fa-hourglass-half
                       |Hồ Chí Minh
                     li
                       i.far.fa-clock
@@ -256,7 +257,7 @@ body
                       i.fas.fa-dollar-sign
                       |15-20 triệu
                     li
-                      i.fas.fa-map-marker-alt
+                      i.fas.fa-hourglass-half
                       |Hồ Chí Minh
                     li
                       i.far.fa-clock
@@ -271,53 +272,7 @@ body
                       i.fas.fa-dollar-sign
                       |15-20 triệu
                     li
-                      i.fas.fa-map-marker-alt
-                      |Hồ Chí Minh
-                    li
-                      i.far.fa-clock
-                      |02-03-2020
-            .advanced-group
-              .advanced-job
-                .job-image: a(href="#"): img(src="./templates/img/job_logo.png", alt="logo job")
-                .job-content
-                  h3: a(href="#") Nhân Viên Thu Mua
-                  .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
-                  ul.job-salary
-                    li
-                      i.fas.fa-dollar-sign
-                      |15-20 triệu
-                    li
-                      i.fas.fa-map-marker-alt
-                      |Hồ Chí Minh
-                    li
-                      i.far.fa-clock
-                      |02-03-2020
-              .advanced-job
-                .job-image: a(href="#"): img(src="./templates/img/job_logo.png", alt="logo job")
-                .job-content
-                  h3: a(href="#") Nhân Viên Thu Mua
-                  .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
-                  ul.job-salary
-                    li
-                      i.fas.fa-dollar-sign
-                      |15-20 triệu
-                    li
-                      i.fas.fa-map-marker-alt
-                      |Hồ Chí Minh
-                    li
-                      i.far.fa-clock
-                      |02-03-2020
-              .advanced-job
-                .job-image: a(href="#"): img(src="./templates/img/job_logo.png", alt="logo job")
-                .job-content
-                  h3: a(href="#") Nhân Viên Thu Mua
-                  .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
-                  ul.job-salary
-                    li
-                      i.fas.fa-dollar-sign
-                      |15-20 triệu
-                    li
-                      i.fas.fa-map-marker-alt
+                      i.fas.fa-hourglass-half
                       |Hồ Chí Minh
                     li
                       i.far.fa-clock
@@ -333,7 +288,7 @@ body
                       i.fas.fa-dollar-sign
                       |15-20 triệu
                     li
-                      i.fas.fa-map-marker-alt
+                      i.fas.fa-hourglass-half
                       |Hồ Chí Minh
                     li
                       i.far.fa-clock
@@ -348,7 +303,7 @@ body
                       i.fas.fa-dollar-sign
                       |15-20 triệu
                     li
-                      i.fas.fa-map-marker-alt
+                      i.fas.fa-hourglass-half
                       |Hồ Chí Minh
                     li
                       i.far.fa-clock
@@ -363,7 +318,7 @@ body
                       i.fas.fa-dollar-sign
                       |15-20 triệu
                     li
-                      i.fas.fa-map-marker-alt
+                      i.fas.fa-hourglass-half
                       |Hồ Chí Minh
                     li
                       i.far.fa-clock
@@ -379,7 +334,7 @@ body
                       i.fas.fa-dollar-sign
                       |15-20 triệu
                     li
-                      i.fas.fa-map-marker-alt
+                      i.fas.fa-hourglass-half
                       |Hồ Chí Minh
                     li
                       i.far.fa-clock
@@ -394,7 +349,7 @@ body
                       i.fas.fa-dollar-sign
                       |15-20 triệu
                     li
-                      i.fas.fa-map-marker-alt
+                      i.fas.fa-hourglass-half
                       |Hồ Chí Minh
                     li
                       i.far.fa-clock
@@ -409,7 +364,53 @@ body
                       i.fas.fa-dollar-sign
                       |15-20 triệu
                     li
-                      i.fas.fa-map-marker-alt
+                      i.fas.fa-hourglass-half
+                      |Hồ Chí Minh
+                    li
+                      i.far.fa-clock
+                      |02-03-2020
+            .advanced-group
+              .advanced-job
+                .job-image: a(href="#"): img(src="./templates/img/job_logo.png", alt="logo job")
+                .job-content
+                  h3: a(href="#") Nhân Viên Thu Mua
+                  .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
+                  ul.job-salary
+                    li
+                      i.fas.fa-dollar-sign
+                      |15-20 triệu
+                    li
+                      i.fas.fa-hourglass-half
+                      |Hồ Chí Minh
+                    li
+                      i.far.fa-clock
+                      |02-03-2020
+              .advanced-job
+                .job-image: a(href="#"): img(src="./templates/img/job_logo.png", alt="logo job")
+                .job-content
+                  h3: a(href="#") Nhân Viên Thu Mua
+                  .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
+                  ul.job-salary
+                    li
+                      i.fas.fa-dollar-sign
+                      |15-20 triệu
+                    li
+                      i.fas.fa-hourglass-half
+                      |Hồ Chí Minh
+                    li
+                      i.far.fa-clock
+                      |02-03-2020
+              .advanced-job
+                .job-image: a(href="#"): img(src="./templates/img/job_logo.png", alt="logo job")
+                .job-content
+                  h3: a(href="#") Nhân Viên Thu Mua
+                  .name-company CÔNG TY BẤT ĐỘNG SẢN SMARTLAND
+                  ul.job-salary
+                    li
+                      i.fas.fa-dollar-sign
+                      |15-20 triệu
+                    li
+                      i.fas.fa-hourglass-half
                       |Hồ Chí Minh
                     li
                       i.far.fa-clock
@@ -419,7 +420,7 @@ body
     .container 
       .row
         .col-lg-8.col-xl-8
-          .advanced.job-goods
+          .wow.slideInUp.advanced.job-goods
             h2.title-work Việc Làm Tốt Nhất
             .advanced-work-group.slider-good-work
               .advanced-group
@@ -437,7 +438,7 @@ body
                         i.fas.fa-dollar-sign
                         |15-20 triệu
                       li
-                        i.fas.fa-map-marker-alt
+                        i.fas.fa-hourglass-half
                         |Hồ Chí Minh
                       li
                         i.far.fa-clock
@@ -452,7 +453,7 @@ body
                         i.fas.fa-dollar-sign
                         |15-20 triệu
                       li
-                        i.fas.fa-map-marker-alt
+                        i.fas.fa-hourglass-half
                         |Hồ Chí Minh
                       li
                         i.far.fa-clock
@@ -470,7 +471,7 @@ body
                         i.fas.fa-dollar-sign
                         |15-20 triệu
                       li
-                        i.fas.fa-map-marker-alt
+                        i.fas.fa-hourglass-half
                         |Hồ Chí Minh
                       li
                         i.far.fa-clock
@@ -486,7 +487,7 @@ body
                         i.fas.fa-dollar-sign
                         |15-20 triệu
                       li
-                        i.fas.fa-map-marker-alt
+                        i.fas.fa-hourglass-half
                         |Hồ Chí Minh
                       li
                         i.far.fa-clock
@@ -501,7 +502,7 @@ body
                         i.fas.fa-dollar-sign
                         |15-20 triệu
                       li
-                        i.fas.fa-map-marker-alt
+                        i.fas.fa-hourglass-half
                         |Hồ Chí Minh
                       li
                         i.far.fa-clock
@@ -516,7 +517,7 @@ body
                         i.fas.fa-dollar-sign
                         |15-20 triệu
                       li
-                        i.fas.fa-map-marker-alt
+                        i.fas.fa-hourglass-half
                         |Hồ Chí Minh
                       li
                         i.far.fa-clock
@@ -535,7 +536,7 @@ body
                         i.fas.fa-dollar-sign
                         |15-20 triệu
                       li
-                        i.fas.fa-map-marker-alt
+                        i.fas.fa-hourglass-half
                         |Hồ Chí Minh
                       li
                         i.far.fa-clock
@@ -550,7 +551,7 @@ body
                         i.fas.fa-dollar-sign
                         |15-20 triệu
                       li
-                        i.fas.fa-map-marker-alt
+                        i.fas.fa-hourglass-half
                         |Hồ Chí Minh
                       li
                         i.far.fa-clock
@@ -565,7 +566,7 @@ body
                         i.fas.fa-dollar-sign
                         |15-20 triệu
                       li
-                        i.fas.fa-map-marker-alt
+                        i.fas.fa-hourglass-half
                         |Hồ Chí Minh
                       li
                         i.far.fa-clock
@@ -581,7 +582,7 @@ body
                         i.fas.fa-dollar-sign
                         |15-20 triệu
                       li
-                        i.fas.fa-map-marker-alt
+                        i.fas.fa-hourglass-half
                         |Hồ Chí Minh
                       li
                         i.far.fa-clock
@@ -596,7 +597,7 @@ body
                         i.fas.fa-dollar-sign
                         |15-20 triệu
                       li
-                        i.fas.fa-map-marker-alt
+                        i.fas.fa-hourglass-half
                         |Hồ Chí Minh
                       li
                         i.far.fa-clock
@@ -611,13 +612,13 @@ body
                         i.fas.fa-dollar-sign
                         |15-20 triệu
                       li
-                        i.fas.fa-map-marker-alt
+                        i.fas.fa-hourglass-half
                         |Hồ Chí Minh
                       li
                         i.far.fa-clock
                         |02-03-2020
           
-          .advanced.job-salary
+          .wow.slideInUp.advanced.job-salary
             h2.title-work Việc Làm Thu Nhập Cao    
             .advanced-work-group.slider-good-work
               .advanced-group
@@ -635,7 +636,7 @@ body
                         i.fas.fa-dollar-sign
                         |15-20 triệu
                       li
-                        i.fas.fa-map-marker-alt
+                        i.fas.fa-hourglass-half
                         |Hồ Chí Minh
                       li
                         i.far.fa-clock
@@ -650,7 +651,7 @@ body
                         i.fas.fa-dollar-sign
                         |15-20 triệu
                       li
-                        i.fas.fa-map-marker-alt
+                        i.fas.fa-hourglass-half
                         |Hồ Chí Minh
                       li
                         i.far.fa-clock
@@ -668,7 +669,7 @@ body
                         i.fas.fa-dollar-sign
                         |15-20 triệu
                       li
-                        i.fas.fa-map-marker-alt
+                        i.fas.fa-hourglass-half
                         |Hồ Chí Minh
                       li
                         i.far.fa-clock
@@ -684,7 +685,7 @@ body
                         i.fas.fa-dollar-sign
                         |15-20 triệu
                       li
-                        i.fas.fa-map-marker-alt
+                        i.fas.fa-hourglass-half
                         |Hồ Chí Minh
                       li
                         i.far.fa-clock
@@ -699,7 +700,7 @@ body
                         i.fas.fa-dollar-sign
                         |15-20 triệu
                       li
-                        i.fas.fa-map-marker-alt
+                        i.fas.fa-hourglass-half
                         |Hồ Chí Minh
                       li
                         i.far.fa-clock
@@ -714,7 +715,7 @@ body
                         i.fas.fa-dollar-sign
                         |15-20 triệu
                       li
-                        i.fas.fa-map-marker-alt
+                        i.fas.fa-hourglass-half
                         |Hồ Chí Minh
                       li
                         i.far.fa-clock
@@ -733,7 +734,7 @@ body
                         i.fas.fa-dollar-sign
                         |15-20 triệu
                       li
-                        i.fas.fa-map-marker-alt
+                        i.fas.fa-hourglass-half
                         |Hồ Chí Minh
                       li
                         i.far.fa-clock
@@ -748,7 +749,7 @@ body
                         i.fas.fa-dollar-sign
                         |15-20 triệu
                       li
-                        i.fas.fa-map-marker-alt
+                        i.fas.fa-hourglass-half
                         |Hồ Chí Minh
                       li
                         i.far.fa-clock
@@ -763,7 +764,7 @@ body
                         i.fas.fa-dollar-sign
                         |15-20 triệu
                       li
-                        i.fas.fa-map-marker-alt
+                        i.fas.fa-hourglass-half
                         |Hồ Chí Minh
                       li
                         i.far.fa-clock
@@ -779,7 +780,7 @@ body
                         i.fas.fa-dollar-sign
                         |15-20 triệu
                       li
-                        i.fas.fa-map-marker-alt
+                        i.fas.fa-hourglass-half
                         |Hồ Chí Minh
                       li
                         i.far.fa-clock
@@ -794,7 +795,7 @@ body
                         i.fas.fa-dollar-sign
                         |15-20 triệu
                       li
-                        i.fas.fa-map-marker-alt
+                        i.fas.fa-hourglass-half
                         |Hồ Chí Minh
                       li
                         i.far.fa-clock
@@ -809,14 +810,14 @@ body
                         i.fas.fa-dollar-sign
                         |15-20 triệu
                       li
-                        i.fas.fa-map-marker-alt
+                        i.fas.fa-hourglass-half
                         |Hồ Chí Minh
                       li
                         i.far.fa-clock
                         |02-03-2020
               
         .col-lg-4.col-xl-4
-          .typical-staff
+          .wow.slideInUp.typical-staff
             h2.title ứng viên tiêu biểu
             .sub-title Ứng viên có nhiều kinh nghiệm trong lĩnh vực kế toán
             .staff-group
@@ -864,7 +865,7 @@ body
                     dt.staff-major Kế toán - Kiểm toán
                     dd.staff-salary Lương: 13.500.000 đ  - TP.HCM
 
-  section.mission
+  section.wow.slideInUp.mission(data-wow-duration='2s')
     .container
       .row
         h2.title MANG LẠI GIÁ TRỊ XỨNG ĐÁNG CHO KHÁCH HÀNG
@@ -896,7 +897,7 @@ body
           
     p.slogan NTHC HỖ TRỢ CÁC CÔNG TY PHỒN THỊNH VÀ PHÁT TRIỂN
 
-  section.service
+  section.wow.slideInUp.service
     .container
       .row
         h2.title Dịch vụ của chúng tôi
@@ -962,7 +963,7 @@ body
               .text.heightLine-01 Đào tạo kế toán, thuế cho DN; Đào tạo kế toán, thuế cho người lao động và giới thiệu việc làm sau đào tạo.
               .view-btn: a(href="#") xem thêm
 
-  section.partner
+  section.wow.slideInUp.partner
     .container
       .row
         h2.title đối tác của chúng tôi
@@ -987,5 +988,8 @@ body
     include ./elements/_footer.pug
 
   script(src="./templates/js/jquery.js")
+  script(src="./templates/js/wow.min.js")
   script(src="./templates/js/slick.min.js")
   script(src="./templates/js/default.js")
+  script.
+    new WOW().init();

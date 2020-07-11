@@ -680,7 +680,7 @@ nav {
   }
 
   .job-content {
-    width: calc(100% - 18.5% - 6%);
+    width: calc(100% - 18.5%);
 
     h3 {
       font-size: 14px;
@@ -699,7 +699,7 @@ nav {
       flex-wrap: wrap;
       > li {
         &:not(:last-child) {
-          margin-right: 0.6rem;
+          margin-right: 0.5rem;
         }
         i {
           color: $color;
@@ -747,7 +747,7 @@ nav {
     &.job-goods {
       .advanced-job {
         .job-content {
-          width: calc(100% - 6%);
+          width: calc(100% - 18.5%);
         }
       }
     }
@@ -1323,6 +1323,9 @@ footer {
       .advanced-job {
         width: 50%;
         float: left;
+        .job-content {
+          width: 100%;
+        }
       }
     }
   }
@@ -1333,12 +1336,30 @@ footer {
   h2 {
     padding-bottom: 30px;
   }
+  .list-jobs_new {
+    @extend .flex-between;
+    flex-wrap: wrap;
+  }
   .advanced-job {
     align-items: end;
     padding: 0.75rem 0;
+    width: 49.5%;
     .job-image {
-      width: 15%;
+      width: 22%;
       height: auto;
+    }
+    .job-content {
+      
+      ul {
+        @extend .flex;
+        flex-wrap: wrap;
+        > li {
+          &:not(:last-child) {
+            margin-right: 0.3rem;
+          }
+          
+        }
+      }
     }
   }
 }
@@ -1359,6 +1380,11 @@ footer {
       color: #fff;
     }
   }
+  .filter-box {
+    box-shadow: 0 1px 8px 0px #c7c7c7;
+    padding: 1px 15px 15px;
+    margin-bottom: 15px;
+}
   .filter-title {
     h4 {
       font-size: 18px;
@@ -1434,7 +1460,7 @@ footer {
       flex-wrap: wrap;
       > li {
         &:not(:last-child) {
-          margin-right: 0.6rem;
+          margin-right: 0.5rem;
         }
         i {
           color: $color;
@@ -1536,18 +1562,18 @@ footer {
       padding-bottom: 30px;
     }
     .list-staff {
+      @extend .flex-between;
+      flex-wrap: wrap;
       .staff {
-        box-shadow: $box-shadow;
+        width: 50%;
         @extend .flex;
         padding: 10px;
         transition: all 0.5s ease;
         align-items: center;
         cursor: pointer;
-        &:not(:last-child) {
-          margin-bottom: 15px;
-        }
+        border-bottom: 1px dashed #f2f2f2;
         &-photo {
-          width: 17%;
+          width: 20%;
           img {
             object-fit: cover;
             width: 100%;
@@ -1863,6 +1889,7 @@ footer {
   }
 }
 @media only screen and (max-width: 768px) {
+
   .good-work .advanced {
     margin: 0 -15px;
   }
@@ -2067,7 +2094,7 @@ footer {
   }
   nav {
     background: #f2f2f2;
-    position: relative;
+    position: relative !important;
     .menu-mobile {
       display: flex;
       justify-content: space-between;
@@ -2224,7 +2251,9 @@ footer {
       margin: 0;
     }
   }
-
+  .box-jobs_new .advanced-job {
+    width: 100%;
+}
   .search {
     border-radius: 9px;
     margin: 10% 1rem 0;
@@ -2371,6 +2400,7 @@ footer {
     .box-staffs {
       .list-staff {
         .staff {
+          width: 100%;
           .staff-photo {
             width: 30%;
           }
@@ -2508,7 +2538,7 @@ footer {
             left: 12%;
             z-index: 1;
             transform: rotate(0deg);
-            img{
+            img {
               width: 90%;
             }
           }
@@ -2605,7 +2635,7 @@ footer {
           .uytin {
             top: 11%;
             right: -20%;
-           }
+          }
         }
       }
     }
@@ -2626,17 +2656,17 @@ footer {
             width: 64%;
           }
           .chatluong {
-            right: -4%;
-            transform: rotate(13deg);
+            right: -39%;
+            transform: rotate(3deg);
           }
-          .value {
+          .giatri {
             bottom: 5.8%;
-            left: 40%;
-          }
-          .reputation {
-            top: 27%;
             left: 8%;
-            transform: rotate(-8deg);
+          }
+          .uytin {
+            right: -39%;
+            top: 14%;
+            transform: rotate(2deg);
           }
         }
       }

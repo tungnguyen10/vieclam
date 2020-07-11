@@ -131,105 +131,32 @@ body
           .box-staffs
             h2.title Danh sách ứng viên
             .list-staff
-              .staff
-                .staff-photo: a(href="#"): img(src="./templates/img/staff.png" alt="staff")
-                .staff-content
-                  h3: a(href="#") Nguyễn Thanh Tùng
-                  dl
-                    dt.content-major Kế toán - Kiểm toán
-                    dd.des - Phát triển, maintain các ứng dụng web trên nền PHP
-                      br
-                      |- Phát triển, maintain các ứng dụng web trên nền PHP
-                      br
-                      |- Phát triển, maintain các ứng dụng web trên nền PHP
-
-                    dd.content-salary Lương: 13.500.000 đ  - TP.HCM
-          
-              .staff
-                .staff-photo: a(href="#"): img(src="./templates/img/staff.png" alt="staff")
-                .staff-content
-                  h3 Nguyễn Thanh Tùng
-                  dl
-                    dt.content-major Kế toán - Kiểm toán
-                    dd.des - Phát triển, maintain các ứng dụng web trên nền PHP
-                      br
-                      |- Phát triển, maintain các ứng dụng web trên nền PHP
-                      br
-                      |- Phát triển, maintain các ứng dụng web trên nền PHP
-
-                    dd.content-salary Lương: 13.500.000 đ  - TP.HCM
-          
-              .staff
-                .staff-photo: a(href="#"): img(src="./templates/img/staff.png" alt="staff")
-                .staff-content
-                  h3 Nguyễn Thanh Tùng
-                  dl
-                    dt.content-major Kế toán - Kiểm toán
-                    dd.des - Phát triển, maintain các ứng dụng web trên nền PHP
-                      br
-                      |- Phát triển, maintain các ứng dụng web trên nền PHP
-                      br
-                      |- Phát triển, maintain các ứng dụng web trên nền PHP
-
-                    dd.content-salary Lương: 13.500.000 đ  - TP.HCM
-          
-              .staff
-                .staff-photo: a(href="#"): img(src="./templates/img/staff.png" alt="staff")
-                .staff-content
-                  h3 Nguyễn Thanh Tùng
-                  dl
-                    dt.content-major Kế toán - Kiểm toán
-                    dd.des - Phát triển, maintain các ứng dụng web trên nền PHP
-                      br
-                      |- Phát triển, maintain các ứng dụng web trên nền PHP
-                      br
-                      |- Phát triển, maintain các ứng dụng web trên nền PHP
-
-                    dd.content-salary Lương: 13.500.000 đ  - TP.HCM
-          
-              .staff
-                .staff-photo: a(href="#"): img(src="./templates/img/staff.png" alt="staff")
-                .staff-content
-                  h3 Nguyễn Thanh Tùng
-                  dl
-                    dt.content-major Kế toán - Kiểm toán
-                    dd.des - Phát triển, maintain các ứng dụng web trên nền PHP
-                      br
-                      |- Phát triển, maintain các ứng dụng web trên nền PHP
-                      br
-                      |- Phát triển, maintain các ứng dụng web trên nền PHP
-
-                    dd.content-salary Lương: 13.500.000 đ  - TP.HCM
-          
-              .staff
-                .staff-photo: a(href="#"): img(src="./templates/img/staff.png" alt="staff")
-                .staff-content
-                  h3 Nguyễn Thanh Tùng
-                  dl
-                    dt.content-major Kế toán - Kiểm toán
-                    dd.des - Phát triển, maintain các ứng dụng web trên nền PHP
-                      br
-                      |- Phát triển, maintain các ứng dụng web trên nền PHP
-                      br
-                      |- Phát triển, maintain các ứng dụng web trên nền PHP
-
-                    dd.content-salary Lương: 13.500.000 đ  - TP.HCM
-          
-              .staff
-                .staff-photo: a(href="#"): img(src="./templates/img/staff.png" alt="staff")
-                .staff-content
-                  h3 Nguyễn Thanh Tùng
-                  dl
-                    dt.content-major Kế toán - Kiểm toán
-                    dd.des - Phát triển, maintain các ứng dụng web trên nền PHP
-                      br
-                      |- Phát triển, maintain các ứng dụng web trên nền PHP
-                      br
-                      |- Phát triển, maintain các ứng dụng web trên nền PHP
-
-                    dd.content-salary Lương: 13.500.000 đ  - TP.HCM
-          
-          
+              mixin staff
+                .staff
+                  .staff-photo: a(href="#"): img(src="./templates/img/staff.png" alt="staff")
+                  .staff-content
+                    h3: a(href="#") Nguyễn Thanh Tùng
+                    dl
+                      dt.content-major Kế toán - Kiểm toán
+                      dd.content-salary Lương: 13.500.000 đ  - TP.HCM
+              +staff
+              +staff
+              +staff
+              +staff
+              +staff
+              +staff
+              +staff
+              +staff
+              +staff
+              +staff
+              +staff
+              +staff
+              +staff
+              +staff
+              +staff
+              +staff
+              +staff
+              +staff
           //- jobnews
           block jobnews
             include ./elements/_jobnew.pug
@@ -237,8 +164,7 @@ body
         .col-md-3.hidden-sm.hidden-xs
           block filter
             include ./elements/_filter.pug
-          block staff
-            include ./elements/_staff.pug
+          
 
 
   //- footer

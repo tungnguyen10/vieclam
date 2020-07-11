@@ -19,7 +19,6 @@ $(window).on('scroll', function(){
 
 // BEGIN: SLIDER
 $(document).ready(function () {
-  
   $(".slider-banner").slick({
     dots: false,
     infinite: true,
