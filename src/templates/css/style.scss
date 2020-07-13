@@ -633,9 +633,16 @@ nav {
 .advanced-work-group {
   @extend .flex-between;
   padding: 20px 0;
+  flex-wrap: wrap;
 
   .advanced-group {
     width: 100%;
+  }
+  &.no-slider{
+    justify-content: flex-start;
+    .advanced-job {
+      width: 33.33%;
+    }
   }
 }
 .advanced-job {
@@ -661,7 +668,6 @@ nav {
   .job-image {
     border: 1px solid #f2f2f2;
     width: 18.5%;
-    height: 18.5%;
     box-sizing: border-box;
     padding: 1%;
     margin-right: 2.5%;
@@ -731,7 +737,12 @@ nav {
 .good-work {
   margin-top: 45px;
   margin-bottom: 40px;
-
+  .no-slider{
+    justify-content: flex-start;
+    .advanced-job {
+      width: 50%;
+    }
+  }
   .slick-dots {
     bottom: 15px;
   }
@@ -1330,13 +1341,13 @@ footer {
     }
   }
 }
-.box-jobs_new {
+.box-jobs-new {
   padding-top: 60px;
   padding-bottom: 60px;
   h2 {
     padding-bottom: 30px;
   }
-  .list-jobs_new {
+  .list-jobs-new {
     @extend .flex-between;
     flex-wrap: wrap;
   }
@@ -1889,7 +1900,9 @@ footer {
   }
 }
 @media only screen and (max-width: 768px) {
-
+  .advanced-work-group.no-slider .advanced-job {
+    width: 50%;
+}
   .good-work .advanced {
     margin: 0 -15px;
   }
@@ -2250,10 +2263,17 @@ footer {
     .advanced {
       margin: 0;
     }
+    .no-slider{
+      .advanced-job {
+        width: 100%;
+      }
+    }
   }
-  .box-jobs_new .advanced-job {
+  .advanced-work-group.no-slider .advanced-job,
+  .box-jobs-new .advanced-job {
     width: 100%;
 }
+
   .search {
     border-radius: 9px;
     margin: 10% 1rem 0;
@@ -2388,7 +2408,7 @@ footer {
       }
     }
   }
-  .box-jobs_new {
+  .box-jobs-new {
     .advanced-job {
       .job-image {
         width: 29%;
